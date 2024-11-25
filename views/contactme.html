@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all">
 
     
     <style>
@@ -122,38 +122,38 @@
       <div class = "header-nav">
       
       <div class="button">
-        <a href="home.html">
+        <a href="https://itskelechi.neocities.org/home">
           <button type="submit"> HOME </button> 
         </a>
       </div>
 
       <div class="button">
-        <a href="intro.html">
+        <a href="https://itskelechi.neocities.org/intro">
           <button type="submit"> ABOUT </button> 
         </a>
       </div>
       
       <div class="button">
-        <a href="schedule.html">
+        <a href="https://itskelechi.neocities.org/schedule">
           <button type="submit"> SCHEDULE </button> 
         </a>
       </div>
         
       <div class="button">
-        <a href="projects.html">
+        <a href="https://itskelechi.neocities.org/projects">
           <button type="submit"> PROJECTS </button> 
         </a>
       </div>
         
       <div class="button">
-        <a href="blog.html">
+        <a href="https://itskelechi.neocities.org/blog">
           <button type="submit"> BLOGS </button> 
         </a>
       </div>      
         
       </div>
     </header>
-        <img src = "Site Images/cloud.png" class="cloud">
+        <img src = "./SiteImages/cloud.png" class="cloud">
   
     <main>
       <div class="container">
@@ -185,8 +185,9 @@
               <div class="title-bar-text" style="font-size: 24px">Talk to Me</div>
             </div>
       
-              <div class="window-body" style="justify-content: center; text-align: center; padding: 1.5rem;">
-                <form id="my-form" action="https://fabform.io/f/gzfO8wz" method="POST">
+              <div class="window-body">
+                <form id="contactForm" action="https://formspree.io/f/mdkodzkb" method="POST">
+
                   <label for="name">Name:</label>
                   <input type="text" name="name" id="name" placeholder="Your Name" required>
           
@@ -202,11 +203,11 @@
                   <textarea name="message" id="message" placeholder="What would you like to say?" required></textarea>
           
                   
-                  <input type="hidden" name="_next" value="https://itskelechi.neocities.org/home">
-                  <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html">
+                  <!-- <input type="hidden" name="_next" value="https://itskelechi.neocities.org/home">
+                  <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html"> -->
 
-                  <button id="my-form-button" type="submit">Send Message</button>
-                  <p id="my-form-status"></p>
+                  <button type="submit">Send Message</button>
+                  <p id="formStatus">blah blah blah</p>
                 </form>
 
               </div>
@@ -216,7 +217,40 @@
       </div>
     </main>
     
-  <script src="Scripts/contact.js"></script>
+  <script>
+const form = document.getElementById("contactForm");
+const reply = document.getElementById("formStatus");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const urlEncodedData = new URLSearchParams();
+    formData.forEach((value, key) => {
+        urlEncodedData.append(key, value);
+    });
+    fetch(form.action, {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: urlEncodedData
+    }).then(response =>{
+        if (response.status === 200){
+            form.reset();
+            console.log("Message sent")
+            reply.style.display = "block";
+            reply.innerHTML = "Thanks for your message! We'll talk soon. \n - xoxo K"
+
+        } else{
+          console.log("Message NOT sent")
+            reply.innerHTML= "Oops! There was a problem submitting your form. Please try again"
+        }
+    }).catch(err =>{
+        console.err('Error: ', err);
+        reply.innerHTML ="Thanks for your message! We'll talk soon. xoxo K"
+    });
+    
+});
+  
+  </script>
   </body>
 </html>
 

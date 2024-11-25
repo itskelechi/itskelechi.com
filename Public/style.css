@@ -35,7 +35,7 @@
 
 body {
     background-color: #e6bed4;
-    background-image: url('SiteImages/siteBackground.png');
+    background-image: url('./SiteImages/siteBackground.png');
     
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
@@ -151,13 +151,13 @@ p{
 }
 
 #frontpage{
-    background-image: url('Site Images/site_landing.jpg');
+    background-image: url('./SiteImages/site_landing.png');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
   }
 #waitroom{
-    background-image: url('Site Images/lounge.jpg');
+    background-image: url('./SiteImages/lounge.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -212,10 +212,6 @@ header {
   color: #c38da2;
 }
 
-/*.header-nav .button a:visited button {*/
-/*  background-color: #a0c8d4;*/
-/*  color: #a55280;*/
-/*}*/
 
 /*------------------------------------------------------------------*/
 
@@ -243,6 +239,7 @@ main {
     max-width: 1440px; 
     justify-content: center;
 }
+
 img.cloud{
       float: center;
       width: 100%;
@@ -363,7 +360,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 }
 
 .label{
-  text-align: left;
+  text-align: left !important;
   padding: 0.25rem;
   
 }
