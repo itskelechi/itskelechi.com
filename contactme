@@ -178,7 +178,7 @@
 
         
         <div id="right-column">
-          <div class="form" style="background-image: url('Site Images/computer.jpg')">
+          <div class="form" style="background-image: url('SiteImages/computer.jpg')">
             <div class="window" style="margin: 5rem; width: auto; height: auto;">
       
               <div class="title-bar">
