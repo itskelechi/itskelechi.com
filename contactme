@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="form-action 'self' https://formspree.io;">
+    <title>Tell me something I don't know...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+    
+    <style>
+     main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+      padding: 0.75rem;
+      box-sizing: border-box;
+      font-family: "Silkscreen", sans-serif;
+
+     
+    }
+   
+    #left-column, #right-column {
+      display: flex;
+      margin: 0.25rem;
+      align-items: center;
+      flex-direction: column;
+      position:relative;
+      margin-right: auto;
+      margin-left: auto;
+    }    
+    
+    #left-column, #right-column {
+      flex: 1;
+      max-width: 20%;
+      gap: 0.125rem;
+      min-width: 10rem;
+    }
+    
+    #right-column {
+      right:0;
+    }
+  
+    
+    #right-column {
+      background-image: url('Site Images/gallery/computer.jpg');
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+      flex: 2;
+      margin: 0 auto;
+      max-width: 60%;
+    }
+    
+    #left-column {
+      left:0;
+    }
+    
+    
+    input, textarea{
+      padding: 5px 10px;
+      border: 4px inset #c38da2;
+      border-style: outset;
+      color: #422c42;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 0 0 3px #eeded2;
+    }
+    
+    img.windowIcon{
+      float: center;
+      height: 350px;
+      width: 100%
+    }
+ 
+    
+    @media (max-width: 840px) {
+      #left-column, #right-column{
+        flex-basis: 100%; 
+        max-width: 100%; 
+        height: auto;
+       
+      }
+      #right-column{
+        margin-bottom: 140px: 
+      }
+    }
+
+    ul li button {
+      width: 100%;
+      padding: 0.5rem; 
+      margin-top: 0.5rem; 
+      text-align: center;
+      justify-contnent: center;
+      box-sizing: border-box;
+    }
+    
+    p {
+      font-size: 20px;
+      color: #a55280;
+    }
+    .success, .error {
+      font-size: 1em;
+      color: #cdffd8;
+      display: none;
+    }
+
+    .error {
+      color: #bb2727;
+    }
+    </style>
+  </head>
+  
+  
+  <body>
+  <header>
+      <div class = "header-nav">
+      
+      <div class="button">
+        <a href="home.html">
+          <button type="submit"> HOME </button> 
+        </a>
+      </div>
+
+      <div class="button">
+        <a href="intro.html">
+          <button type="submit"> ABOUT </button> 
+        </a>
+      </div>
+      
+      <div class="button">
+        <a href="schedule.html">
+          <button type="submit"> SCHEDULE </button> 
+        </a>
+      </div>
+        
+      <div class="button">
+        <a href="projects.html">
+          <button type="submit"> PROJECTS </button> 
+        </a>
+      </div>
+        
+      <div class="button">
+        <a href="blog.html">
+          <button type="submit"> BLOGS </button> 
+        </a>
+      </div>      
+        
+      </div>
+    </header>
+        <img src = "Site Images/cloud.png" class="cloud">
+  
+    <main>
+      <div class="container">
+      
+                <div id="left-column">
+          <div class="comment-section">
+            <div class="window" style="margin: 0.5rem; width:100%; height:auto;">
+              <div class="title-bar">
+                <div class="title-bar-text" style="font-size: 18px">Leave a Comment</div>
+              </div>
+              <div class="window-body" style="justify-content: center; text-align: center; padding: 0.75rem;">         
+                <textarea id="comment" style="font-size:11px" placeholder="For your couple of pennies"> </textarea>
+                <textarea id="author" style="font-size:8px" placeholder="Author name"></textarea>
+            
+                <div class="button" style="justify-content; end; width: fit-content">
+                  <button type="submit"> SEND </button> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div id="right-column">
+          <div class="form" style="background-image: url('Site Images/computer.jpg')">
+            <div class="window" style="margin: 5rem; width: auto; height: auto;">
+      
+              <div class="title-bar">
+              <div class="title-bar-text" style="font-size: 24px">Talk to Me</div>
+            </div>
+      
+              <div class="window-body" style="justify-content: center; text-align: center; padding: 1.5rem;">
+                <form id="my-form" action="https://fabform.io/f/gzfO8wz" method="POST">
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name" placeholder="Your Name" required>
+          
+                  
+                  <label for="email">Email Address:</label>
+                  <input type="email" name="email" id="email" placeholder="you@example.com" required>
+          
+                  
+                  <!--<label for="subject">Subject:</label>-->
+                  <!--<input type="text" name="subject" id="subject" placeholder="Subject of Your Message" required>-->
+                  
+                  <label for="message">Message:</label>
+                  <textarea name="message" id="message" placeholder="What would you like to say?" required></textarea>
+          
+                  
+                  <input type="hidden" name="_next" value="https://itskelechi.neocities.org/home">
+                  <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html">
+
+                  <button id="my-form-button" type="submit">Send Message</button>
+                  <p id="my-form-status"></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  <script src="Scripts/contact.js"></script>
+  </body>
+</html>
+
