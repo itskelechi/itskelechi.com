@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Kelechi's Portfolio" content="width=device-width, initial-scale=1.0">
+    <title>We've been waiting for you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet" type="text/css" media="all">
+      <!--<link rel="stylesheet" href="https://unpkg.com/98.css" />-->
+      
+      <style>
+      h1{
+        font-family: "Silkscreen", sans-serif;
+        color: #ffffff;
+        font-size: 72px;
+        }
+        
+        p#last{
+         color: #fff; 
+        }
+        
+        
+      
+      </style>
+  </head>
+  
+  <body id="frontpage">
+       <h1>WELCOME...</h1>
+    <div class = "home-page" style="text-align: center; ">
+    
+      <main>
+      
+        <div class="window" style="margin: 32px; width: 400px; height: 260px;">
+          <div class="title-bar">
+            <div class="title-bar-text">
+              WELCOME...
+            </div>
+          </div>
+          <div class="window-body" style="padding: 1rem;">
+            <p>Do You Wish To Continue?</p>
+            <br>
+            <div style= "display: inline-flex; align-content: end; justify-content: center;gap: 2rem">
+            
+              <div class="button" style="justify-content: center;padding: 1rem;">
+                <a href="https://itskelechi.neocities.org/home" target="_blank">
+                  <button type="submit"> Yes </button> 
+                </a>
+              </div>
+
+              <div class="button" style="justify-content: center; padding: 1rem;">
+                <button type="submit" disabled> No </button> 
+              </div>
+            
+              <!--<form action="https://itskelechi.neocities.org/home" method="GET">-->
+              <!--  <button type="submit" class = "button"> Yes </button> -->
+              <!--  <button class = "button" disabled> No </button>-->
+              <!--</form>-->
+            </div>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+    
+ <p id="last"> HII </p>
+      
+      <script>
+        var lastUpdated = document.lastModified;
+        var element = document.getElementById("last");
+        element.innerHTML = "<small>Last Updated: " +lastUpdated + "</small>";
+      </script>
+      
+  </body>
+</html>
