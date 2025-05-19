@@ -34,35 +34,28 @@
 }
 
 body {
-    background-color: #e6bed4;
-    background-image: url('./SiteImages/siteBackground.png');
-    
-    font-family: "Arial", monospace;
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 12px;
-    color: #a55280;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    cursor: url(mouse-pointer.png), auto;
-}
-
-main{
+  background-color: #e6bed4;
+  background-image: url('SiteImages/layout/site-background.png');
+  
+  font-family: "Arial", monospace;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px;
+  color: #a55280;
   display: flex;
   flex-direction: column;
-  font-family: "Silkscreen", sans-serif; 
-  min-width: 375px;
+  height: 100%;
+  width: 100%;
+  cursor: url(mouse-pointer.png), auto;
 }
+
+/*----------------------fonts--------------------------------------*/
 
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #a55280;
-
 }
-
 
 .pixelify-sans-pixelify {
   font-family: "Pixelify Sans", sans-serif;
@@ -81,25 +74,26 @@ h1{
 }
 
 h2{
+  font-family: "Silkscreen", sans-serif;
   font-size: 3rem;
-    color: #a55280;
-
+  color: #a55280;
 }
 
 h3{
+  font-family: "Silkscreen", sans-serif;
   font-size: 2rem;
-    color: #a55280;
-    font-weight: normal;
-
+  color: #a55280;
+  font-weight: normal;
 }
 
 h4{
+  font-family: "Silkscreen", sans-serif;
   font-size: 1rem;
-    color: #a55280;
-
+  color: #a55280;
 }
 
 h5{
+  font-family: "Silkscreen", sans-serif;
   font-size: 0.5rem;
   color: #a55280;
   font-style: none;
@@ -109,8 +103,11 @@ h5{
 
 p{
   font-size: 28px;
-    color: #a55280;
+  color: #a55280;
 }
+
+/*----------------------page objects-------------------------------*/
+
 * ::-webkit-scrollbar{
   width: 8px; /* Width of the scrollbar */
   border: 2px outset #fff;
@@ -139,7 +136,7 @@ p{
   background-color: #0b553c;
 }
 
-
+/*------------------------------------------------------------------*/
 .home-page {
     height: 100vh; 
     width: 100vw;
@@ -151,17 +148,19 @@ p{
 }
 
 #frontpage{
-    background-image: url('./SiteImages/site_landing.png');
+    background-image: url("./SiteImages/layout/site-landing.png");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+    height: 100vh;
   }
-  
+
 #waitroom{
-    background-image: url('./SiteImages/lounge.jpg');
+    background-image: url("./SiteImages/layout/waitroom.jpg");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
+    height: 100vh;
 
   }
 
@@ -189,6 +188,7 @@ header {
 }
 
 .header-nav .button {
+  
   flex-grow: 1;
   flex-basis: 0;
   justify-content: center;
@@ -213,10 +213,14 @@ header {
   color: #c38da2;
 }
 
+/*.header-nav .button a:visited button {*/
+/*  background-color: #a0c8d4;*/
+/*  color: #a55280;*/
+/*}*/
 
 /*------------------------------------------------------------------*/
 
-main {
+/* main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,6 +234,11 @@ main {
     box-sizing: border-box;
      
 
+} */
+main{
+  display: flex;
+  flex-direction: column;
+  font-family: "Silkscreen", sans-serif; 
 }
 
 .container {
@@ -238,9 +247,11 @@ main {
     flex-wrap: wrap;
     width: 100%;
     max-width: 1440px; 
-    justify-content: center;
-}
+    min-width: 375px;
+    justify-content: center;    
+    margin: 0 auto;
 
+}
 img.cloud{
       float: center;
       width: 100%;
@@ -266,6 +277,7 @@ footer {
   color: #c38da2;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 3px 3px #c38da2, 0 0 0 3px #eeded2;
+  height: 10%
 }
 
 .footer-nav {
@@ -361,7 +373,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 }
 
 .label{
-  text-align: left !important;
+  text-align: left;
   padding: 0.25rem;
   
 }
@@ -412,7 +424,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
     padding: 4px;
 }
 
-.dropbtn {
+.dropbtn, .popbtn {
   font-family: "Silkscreen", sans-serif;
   flex-direction: column;
   width: 100%;
@@ -422,7 +434,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 
 
 
-.dropdown-content {
+.dropdown-content, .popup-content {
   display: none;
   position: absolute;
   background-color: #eddde3;
@@ -431,16 +443,38 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content, .popup-content a {
   color: #c38da2;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content,.popup-content a:hover {
   background-color: #cdffd8 ;
   color: black;
+}
+
+.popup .popup-content {
+  visibility: hidden;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popup-content::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
 /* display dropdown */
@@ -634,7 +668,31 @@ input[type="reset"]:disabled,
   outline: none;
 }
 
+.sm-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #eeded2;
+      color: #c38da2; 
+      border: 3px outset #fff;
+      padding: 5px;
+      text-decoration: none; 
+      width: fit-content;
+      box-shadow: 3px 3px #c38da2, 0 0 0 3px #eeded2;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
+    .sm-btn:hover {
+      transform: scale(1.05);
+      background-color: #cdffd8;
+      color: #a55280;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .sm-icon {
+      width: 45px;
+      height: 45px;
+    }
 
 /*------------------------------------------------------------------*/
 
@@ -731,14 +789,40 @@ a:hover {
 /*------------------------------------------------------------------*/
 
 /*resposive design*/
+@media (max-width: 880px) {
+  img.cloud{
+      float: center;
+      width: 100%;
+      height: 100px;
+    }
+
+}
 @media (max-width: 660px) {
   .header-nav {
-    flex-direction: column; /* Stack the buttons vertically on smaller screens */
-    gap: 8px; /* Reduce gap for mobile view */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+    gap: 7px;
   }
+
+  .header-nav .button a button{
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    min-width: 124px
+  }
+  
   form{
    margin-left: 0; 
   }
+  
+  img.cloud{
+      float: center;
+      width: 100%;
+      height: 75px;
+    }
+
 }
 /*------------------------------------------------------------------*/
 

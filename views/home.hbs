@@ -1,179 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heyyy Girlie!!!</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    
-    <style>
-    
-    main{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-items: center;
-      width: 100%;
-      padding: 0.75rem;
-      box-sizing: border-box;
-      font-family: "Silkscreen", sans-serif;
-
-     
-    }
-    
-   /*.container {*/
-   /*   display: flex;*/
-   /*   gap: 1rem;*/
-   /*   flex-wrap: wrap;*/
-   /*   width: 100%;*/
-   /*   min-width: 320px;*/
-   /*   max-width: 1440px;*/
-   /* }*/
-    
-    #left-column, #center-column, #right-column {
-      display: flex;
-      margin: 0.25rem;
-      align-items: center;
-      flex-direction: column;
-      position:relative;
-      margin-right: auto;
-      margin-left: auto;
-    }    
-    
-    #left-column, #right-column {
-      flex: 1;
-      max-width: 20%;
-      gap: 0.125rem;
-      min-width: 10rem;
-    }
-    
-    #right-column {
-      right:0;
-    }
-  
-    
-    #center-column {
-      background-image: url('Site Images/gallery/spa.jpg');
-      background-size: cover;
-      background-position: center; 
-      background-repeat: no-repeat;
-      flex: 2;
-      margin: 0 auto;
-      max-width: 60%;
-    }
-    
-    #left-column {
-      left:0;
-    }
-    
-    
-    input{
-      /*font-family: "Pixelify Sans", sans-serif;*/
-      padding: 5px 10px;
-      border: 4px inset #c38da2;
-      border-style: outset;
-      /*background-color: #eeded2;*/
-      color: #422c42;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: pointer;
-      box-shadow: 0 0 0 3px #eeded2;
-    }
-    
-    img.windowIcon{
-      float: center;
-      height: 350px;
-      width: 100%
-    }
- 
-    iframe {
-      max-width: 100%;
-    }
-
-
-    @media (max-width: 840px) {
-      #left-column, #right-column, #center-column {
-        flex-basis: 100%; 
-        max-width: 100%; 
-        height: auto;
-       
-      }
-      #right-column{
-        margin-bottom: 140px: 
-      }
-    }
-
-    ul li button {
-      width: 100%;
-      padding: 0.5rem; 
-      margin-top: 0.5rem; 
-      text-align: center;
-      justify-contnent: center;
-      box-sizing: border-box;
-    }
-    
-    p {
-      font-size: 20px;
-      color: #a55280;
-    }
-    .sm-icon {
-      width: 25px;
-      height: 25px;
-    }
-
-
-
-    </style>
-    
-    
-<script src="Scripts/search.js"></script>
-
-  </head>
- 
-  <body>
-  
-    <header>
-      <div class = "header-nav">
-      
-      <div class="button" style="justify-content; center;">
-        <a href="home.html">
-          <button type="submit"> HOME </button> 
-        </a>
-      </div>
-
-      <div class="button" style="justify-content; center;">
-        <a href="intro.html">
-          <button type="submit"> ABOUT </button> 
-        </a>
-      </div>
-      
-      <div class="button" style="justify-content; center;">
-        <a href="schedule.html">
-          <button type="submit"> SCHEDULE </button> 
-        </a>
-      </div>
-        
-      <div class="button" style="justify-content; center;">
-        <a href="projects.html">
-          <button type="submit"> PROJECTS </button> 
-        </a>
-      </div>
-        
-      <div class="button" style="justify-content; center;">
-        <a href="blog.html">
-          <button type="submit"> BLOGS </button> 
-        </a>
-      </div>      
-        
-      </div>
-    </header>
-    <img src = "Site Images/cloud.png" class="cloud">
-
-  
-      <main>
       <div class="container">
         <div id="left-column">
           <div class="button" style="justify-content; center; padding: 1rem auto;">
@@ -188,7 +12,7 @@
             </div>
             <div class="window-body">
               <p>
-                <img src = "Site Images/gallery/saturnMoon.jpg" class="windowIcon">
+                <img src = "SiteImages/gallery/man-on-saturn.jpg" class="windowIcon">
               </p>
             </div>
           </div>
@@ -231,7 +55,7 @@
                 Grab a seat, let’s make something amazing, and i promise i'll bring pizza.
             </p>
             <p style="float: right; padding-bottom: 1rem;">
-                <img src = "Site Images/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
+                <img src = "SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
              
             </div>
           </div>
@@ -243,7 +67,7 @@
        <div class="input" style="margin: 0.5rem;">
         <input type="text" name="query" id= "searchInput" placeholder="What'cha looking for?" required>
           <button type="submit" onclick="search()">
-            <img src="Site Images/SEARCH.png" alt="Search">
+            <img src="SiteImages/search-btn.png" alt="Search">
           </button>
       </div>
       <!--photo-->
@@ -252,7 +76,7 @@
             <div class="title-bar-text"><br></div>
           </div>
           <div class="window-body">
-            <img src = "Site Images/gallery/pond.jpg" class="windowIcon">
+            <img src = "SiteImages/gallery/pond.jpg" class="windowIcon">
           </div>
         </div>
         
@@ -262,19 +86,19 @@
           
             <li> 
               <a href="https://www.facebook.com/theredgirlcompany" target="_blank" class="sm-btn">
-                <img src="Site Images/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
+                <img src="SiteImages/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
               </a>
           
               <a href="https://www.instagram.com/mpdbg.jpg/" target="_blank" class="sm-btn">
-                <img src="Site Images/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
+                <img src="SiteImages/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
               </a>
             
               <a href="https://www.linkedin.com/in/kelechi-ariwodo-735545114/" target="_blank" class="sm-btn">
-                <img src="Site Images/Icons/linked-in.png" alt="LinkedIn" class="sm-icon">
+                <img src="SiteImages/Icons/linked-in.png" alt="LinkedIn" class="sm-icon">
               </a>
     
               <a href="https://open.spotify.com/user/12172732320?si=b77411fc88ca40ae" target="_blank" class="sm-btn">
-                <img src="Site Images/Icons/spotify.png" alt="Spotify" class="sm-icon">
+                <img src="SiteImages/Icons/spotify.png" alt="Spotify" class="sm-icon">
               </a>
             </li>
             
@@ -296,65 +120,12 @@
       
     
      
-      </main>
+     {{> gallery}}
       
-        <div class="gallery-container">
-       <div class = "gallery">
-            <img src="glitterpen.jpg" alt = "Pink background, white text: Signs legal docment in glitterpen"/>
-            <img src ="Site Images/gallery/bath.jpg" alt = "bath" />
-            <img src ="Site Images/gallery/bot.jpg" alt = "robot" />
-            <img src ="Site Images/gallery/computerGarden.jpg" alt = "computer garden" />
-            <img src ="Site Images/gallery/cruise.jpg" alt = "girl on boat cruising pink river" />
-            <img src ="Site Images/gallery/indoorPool.jpg" alt = "indoor pool" />
-            <img src ="Untitled-1.jpg" alt = "digital painting" />
-            <img src ="Site Images/gallery/lobby.jpg" alt = "waiting room" />
-            <img src ="Site Images/gallery/martini.jpg" alt = "cherry martini" />
-            <img src ="Site Images/gallery/PlanetHer.jpg" alt = "palnet H.E.R" />
-            <img src ="Site Images/gallery/sleepFloat.jpg" alt = "bed floating on river" />
-            <img src ="Site Images/gallery/timehallway.jpg" alt = "time hallway" />
-            <img src ="Site Images/gallery/subway.jpg" alt = "metrocar" />
-            
-            
-          </div>
-      </div>
+     
       <!--container end-->
-      
-      <footer>
-       <div class = "footer-nav">
-        start button
-        <div class="button" style="justify-content; center;">
-            <button type="submit" class="dropbtn" onclick="toggleDropdown()"> 
-              <img src="Site Images/start-btn.png" alt="Start" style="width:100%">
-            </button> 
-            <div id="dropdown-menu" class="dropdown-content">
-              <a href="https://itskelechi.neocities.org/home">Home</a>
-              <a href="https://itskelechi.neocities.org/intro">About</a>
-              <a href="https://itskelechi.neocities.org/schedule">Schedule</a>
-              <a href="https://itskelechi.neocities.org/projects">Projects</a>
-              <a href="https://itskelechi.neocities.org/blog">Blogs</a>
-            </div>
-        </div>
-      </div>
-        
-
-        
-        <!--copyright-->
-        <p id="copyright" style="font-size: 8px; justify-contnent: center;">legal mumbo jumbo</p>
-        <br>
-         <!--time stamp-->
-        <p id="last" style="font-size: 8px; justify-content: end;"> may the force be with you </p>
-      </div>
-      
       
     <script src="Scripts/download.js"> </script>
     <script src="Scripts/dropdown.js"></script>
     <script src="Scripts/script.js"></script>
         <script src="Scripts/search.js"></script>
-
-
-      </footer>
-
-  </body>
-</html>
-
-

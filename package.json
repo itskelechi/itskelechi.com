@@ -19,6 +19,7 @@
   "author": "Kelechi Ariwodo",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "jest": "latest",
     "nodemon": "^3.1.10"
   },
