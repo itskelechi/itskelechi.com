@@ -1,36 +1,44 @@
 const express = require('express');
-const path = require('path');
-// const exphbs = require('express-handlebars');
-const app = express();
-const PORT = 7693;
+const router = express();
+const port = 3000;
 
-// app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
-// app.set('view engine', 'hbs');
+const exphbs = require('express-handlebars');
 
-app.use(express.static('Public'));
-app.use(express.json());
+router.set('view engine', 'hbs');
+
+router.engine('hbs', exphbs({ 
+  layoutsDir: `${__dirname}/views/layouts`
+ ,extname: 'hbs'
+ ,defaultLayout: 'index'
+ ,partialsDir: `${__dirname}/views/partials`
+}));
+
+router.use(express.static('public'));
+router.use(express.json());
 
 // Routes
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
-  });
+router.get('/', (req, res) => {
+  res.render('main' ,{layout : 'welcome'})
+});
   
-//   app.get('/home', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'views', 'home.html'));
-//   });
+router.get('/home', (req, res) => {
+  res.render('home');
+});
   
-//   app.get('/intro', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'views', 'intro.html'));
-//   });
-  
-//   app.get('/projects', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'views', 'projects.html'));
-//   });
-  
-  app.get('/contactus', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'contactme.html'));
-  });
+router.get('/intro', (req, res) => {
+  res.render('intro');
+});
+
+router.get('/projects', (req, res) => {
+  res.render('projects');
+});
+
+router.get('/contactus', (req, res) => {
+  res.render('contactme');
+});
 
 
 // Start server
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+router.listen(port, () => 
+  console.log(`Have you been to the Port 3000? The Server is strutting her stuff there: http://localhost:${port}`)
+);

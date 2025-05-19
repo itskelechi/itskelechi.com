@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "express": "^4.21.1"
-  }
+    "22": "^0.0.0",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.3",
+    "hbs": "^4.2.0",
+    "mode": "^0.3.2",
+    "next": "latest",
+    "node": "^20.19.2",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "next dev",
+    "build": "next build",
+    "test": "jest"
+  },
+  "author": "Kelechi Ariwodo",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "latest"
+  },
+  "name": "itskelechi.com",
+  "description": "We've been waiting for you",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": []
 }
