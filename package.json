@@ -6,20 +6,21 @@
     "hbs": "^4.2.0",
     "mode": "^0.3.2",
     "next": "latest",
-    "node": "^20.19.2",
+    "node": "^22.15.1",
     "react": "latest",
     "react-dom": "latest"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "next dev",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "build": "next build",
     "test": "jest"
   },
   "author": "Kelechi Ariwodo",
   "license": "MIT",
   "devDependencies": {
-    "jest": "latest"
+    "jest": "latest",
+    "nodemon": "^3.1.10"
   },
   "name": "itskelechi.com",
   "description": "We've been waiting for you",

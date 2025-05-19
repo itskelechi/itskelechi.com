@@ -1,44 +1,43 @@
 const express = require('express');
-const router = express();
+const app = express();
 const port = 3000;
 
-const exphbs = require('express-handlebars');
+const { engine } = require('express-handlebars');
 
-router.set('view engine', 'hbs');
-
-router.engine('hbs', exphbs({ 
+app.set('view engine', 'hbs');
+app.engine('hbs', engine({ 
   layoutsDir: `${__dirname}/views/layouts`
  ,extname: 'hbs'
  ,defaultLayout: 'index'
  ,partialsDir: `${__dirname}/views/partials`
 }));
 
-router.use(express.static('public'));
-router.use(express.json());
+app.use(express.static('public'));
+app.use(express.json());
 
 // Routes
-router.get('/', (req, res) => {
-  res.render('main' ,{layout : 'welcome'})
+app.get('/', (req, res) => {
+  res.render('main', { layout: 'buffer' })
 });
   
-router.get('/home', (req, res) => {
-  res.render('home');
+app.get('/home', (req, res) => {
+  res.render('home', { layout: 'index' });
 });
   
-router.get('/intro', (req, res) => {
-  res.render('intro');
+app.get('/intro', (req, res) => {
+  res.render('intro', { layout: 'index' });
 });
 
-router.get('/projects', (req, res) => {
-  res.render('projects');
+app.get('/projects', (req, res) => {
+  res.render('projects', { layout: 'index' });
 });
 
-router.get('/contactus', (req, res) => {
-  res.render('contactme');
+app.get('/contactus', (req, res) => {
+  res.render('contactme', { layout: 'index' });
 });
 
 
 // Start server
-router.listen(port, () => 
+app.listen(port, () => 
   console.log(`Have you been to the Port 3000? The Server is strutting her stuff there: http://localhost:${port}`)
 );
