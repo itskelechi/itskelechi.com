@@ -6,7 +6,7 @@ function togglePopup(){
       var popups = document.getElementByClassName("popup-content");
       for (let i = 0; i < popups.length; i++){
         let openPopup = popups[i];
-        if (openPopup.clasList.contains("show")){
+        if (openPopup.classList.contains("show")){
           openPopups.classList.remove('show');        
         }
       }
