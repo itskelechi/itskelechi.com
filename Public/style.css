@@ -307,13 +307,13 @@ footer {
   height: auto;
 }
 
-.footer-nav .popbtn button img {
+.footer-nav .dropUpbtn button img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
 }
 
-.footer-nav .popbtn {
+.footer-nav .dropUpbtn {
   color: var(--light-mauve);
   background-color: var(--cream);
   border: 4px inset var(--light-mauve);
@@ -418,7 +418,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
     padding: 4px;
 }
 
-.dropbtn, .popbtn {
+.dropbtn, .dropUpbtn {
   font-family: "Silkscreen", sans-serif;
   flex-direction: column;
   width: 100%;
@@ -427,12 +427,12 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 }
 
 
-.popup-content{
+.dropUp-content{
     bottom: 100%;
     margin-bottom: 5px;
 }
 
-.dropdown-content, .popup-content {
+.dropdown-content, .dropUp-content {
   display: none;
   position: absolute;
   background-color: #eddde3;
@@ -442,7 +442,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   left: 0;
 }
 
-.dropdown-content, .popup-content a {
+.dropdown-content, .dropUp-content a {
   color: var(--light-mauve);
   padding: 12px 16px;
   text-decoration: none;
@@ -451,12 +451,12 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 
 }
 
-.dropdown-content,.popup-content a:hover {
+.dropdown-content,.dropUp-content a:hover {
   background-color: var(--mint-green) ;
   color: black;
 }
 
-.popup .popup-content {
+.dropUp .dropUp-content {
   visibility: hidden;
   text-align: center;
   border-radius: 6px;
@@ -466,8 +466,8 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   margin-left: -80px;
 }
 
-/* Popup arrow */
-.popup .popup-content::after {
+/* dropUp arrow */
+.dropUp .dropUp-content::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -478,7 +478,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   border-color: #555 transparent transparent transparent;
 }
 
-/* display dropdown & popup */
+/* display dropdown & dropUp */
 .show {
   display: block;
 }

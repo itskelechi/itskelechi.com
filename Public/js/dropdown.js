@@ -11,10 +11,10 @@ window.addEventListener('click',  function(event) {
     }
   }
 
-  if (!event.target.matches('.popbtn')) {
-    let popup = document.getElementById("popup-window");
-    if (popup.classList.contains("show")) {
-      popup.classList.remove("show");
+  if (!event.target.matches('.dropUpbtn')) {
+    let dropUp = document.getElementById("dropUp-window");
+    if (dropUp.classList.contains("show")) {
+      dropUp.classList.remove("show");
     }
   }
 });
