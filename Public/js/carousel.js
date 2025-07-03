@@ -2,42 +2,47 @@
 
 const pdfGallery = [
     {
-    file: 'Site Images/portfolio/VdayWorkshop.png',
+    file: './SiteImages/portfolio/VdayWorkshop.png',
     title: 'WIT: Valentine\'s Day Workshop',
     description: 'Designed for WIT@GGC Valentine\'s Day Workshop'
   },
   
   {
-    file: 'Site Images/portfolio/DayInTheLife.png',
+    file: './SiteImages/portfolio/DayInTheLife.png',
     title: 'WIT: A Day in The Life Workshop',
     description: 'Designed for WIT@GGC Coca-cola\'s workshop'
   },
   {
-    file: 'Site Images/portfolio/the-last-5-poster.png',
+    file: './SiteImages/portfolio/the-last-5-poster.png',
     title: 'The Last 5 Film Poster Design',
     description: 'Designed for a film I directed and produced, titled "The Last 5".'
   },
   {
-    file: 'Site Images/portfolio/GreenScene.png',
+    file: './SiteImages/portfolio/GreenScene.png',
     title: 'WIT: Green Scene',
     description: 'Designed for WIT@GGC green scene event'
   },
   
   {
-    file: 'Site Images/portfolio/HacksggcPoster.png',
+    file: './SiteImages/portfolio/HacksggcPoster.png',
     title: 'Grizzly Hacks: Hack GCC Hackathon',
     description: 'Designed for Grizzly Hacks\' 2024 Hackathon'
   },
 
     {
-    file: 'Site Images/portfolio/60PartyMenu.png',
+    file: './SiteImages/portfolio/60PartyMenu.png',
     title: 'Birthday Dinner Party Menu',
     description: 'Designed dinner menu for a dinner party.'
   },
   {
-    file: 'Site Images/portfolio/Grad-party-flier.png',
+    file: './SiteImages/portfolio/Grad-party-flier.png',
     title: 'Graduation Party Flier',
     description: 'Designed flier for a graduation party.'
+  },
+  {
+    file: './SiteImages/portfolio/ScratchWorkshop.png',
+    title: 'WIT: Scratch Workshop',
+    description: 'Designed flier WIT@GGC \'s Scratch Workshop.'
   }
 ];
 

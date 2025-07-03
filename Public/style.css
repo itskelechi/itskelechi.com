@@ -25,7 +25,7 @@
   --light-pink: #e8b7ca; /*dialog pink dark */
   --pale-pink: #eddde3; /*dialog pink light */
   --hunter-green: #0b553c; /*table headers, selected texts*/
-  cursor: url(mouse-pointer.png), auto;  
+  cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
 }
 
 body {
@@ -40,7 +40,6 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    cursor: url(mouse-pointer.png), auto;
 }
 
 main{
@@ -195,7 +194,7 @@ header {
   padding: 10px 20px;
   background-color: var(--cream);
   border: 4px outset var(--white);
-  cursor: pointer;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   font-family: "Silkscreen", sans-serif;
@@ -245,6 +244,12 @@ img.cloud{
       height: 150px;
     }
 
+img.start{
+  width: 100%;
+  height: auto;
+  float: left;
+  /* clear: left; */
+}
 /*------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------*/
@@ -254,16 +259,16 @@ img.cloud{
 footer {
   display: flex;
   bottom: 0;
-  justify-content: center;
+  justify-content: left;
   align-content: center;
   width: 100%;
-  font-family: "Silkscreen", sans-serif;
+  /* font-family: "Silkscreen", sans-serif; */
   font-size: 12px;
   border: 3px outset var(--white); 
   background-color: var(--cream);
   color: var(--light-mauve);
-  transition: var(--background-pink) 0.3s ease, color 0.3s ease;
-  box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+  /* transition: var(--background-pink) 0.3s ease, color 0.3s ease; */
+  /* box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream); */
   height: 10%
 }
 
@@ -280,8 +285,10 @@ footer {
 }
 
 .footer-nav .button {
-  display: flex;
-  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: left;
+  width: 150px;
   
 }
 
@@ -289,28 +296,28 @@ footer {
   color: var(--light-mauve);
   background-color: var(--cream);
   border: 4px inset var(--light-mauve);
-  cursor: pointer;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   box-shadow: 3px 3px var(--dark-mauve), 0 0 0 3px var(--light-mauve);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: fit-content;
+  height: auto;
 }
 
-.footer-nav .dropbtn button img {
+.footer-nav .popbtn button img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
 }
 
-.footer-nav .dropbtn {
+.footer-nav .popbtn {
   color: var(--light-mauve);
   background-color: var(--cream);
   border: 4px inset var(--light-mauve);
-  cursor: pointer;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   box-shadow: 3px 3px #824255, 0 0 0 3px var(--light-mauve);
@@ -340,7 +347,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
     background-color: var(--cream);
     color: var(--light-mauve);
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
+    cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
     width: 100%;
 }
@@ -379,7 +386,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   background-color: transparent;
   border: 3px outset var(--white);
   padding: 0;
-  cursor: pointer;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,6 +427,10 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
 }
 
 
+.popup-content{
+    bottom: 100%;
+    margin-bottom: 5px;
+}
 
 .dropdown-content, .popup-content {
   display: none;
@@ -427,7 +438,8 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   background-color: #eddde3;
   min-width: 150px;
   box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
-  z-index: 1;
+  z-index: 10;
+  left: 0;
 }
 
 .dropdown-content, .popup-content a {
@@ -485,7 +497,7 @@ button:disabled {
     background-color: #c6afb9;
     color: #ffffff;
  /*border: 3px outset #fff #e6bed4;*/
- cursor: not-allowed;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 form{
@@ -534,7 +546,7 @@ input[type="reset"]:disabled,
   background-color: var(--mint-green);
   color: var(--light-mauve);
   transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   width: 100%;
   box-shadow: 3px 3px var(--light-mauve) , 0 0 0 3px #bbd6be;
   border-style: outset;
@@ -542,13 +554,13 @@ input[type="reset"]:disabled,
 
 .window {
   box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
-  background: var(--surface);
+  background: var(--beige);
   border-style: outset;
 }
 
 .window2 {
   box-shadow: 3px 3px #fff, 0 0 0 3px #c6afb9 ;
-  background: var(--surface);
+  background: var(--beige);
   border-style: inset;
   width: fit-content;
 }
@@ -590,7 +602,7 @@ input[type="reset"]:disabled,
     background-color: #c6afb9;
     color: #ffffff;
  /*border: 3px outset #fff #e6bed4;*/
- cursor: not-allowed;
+  cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 .window[role=tabpanel] {
@@ -601,8 +613,8 @@ input[type="reset"]:disabled,
 .title-bar {
   background: linear-gradient(
     90deg,
-    var(--dialog-pink),
-    var(--dialog-pink-light)
+    var(--light-pink),
+    var(--pale-pink)
   );
   margin: 0;
   padding: 6px 0;
@@ -785,6 +797,7 @@ a:hover {
     padding: 0; 
     line-height: 1; 
     display: inline-block;
+    font-size: small;
 }
 /*------------------------------------------------------------------*/
 

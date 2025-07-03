@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const form = document.getElementById("my-form");
 const reply = document.getElementById("my-form-status");
 
