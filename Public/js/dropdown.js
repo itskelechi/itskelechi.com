@@ -1,16 +1,20 @@
 function toggleDropdown() {
-  document.getElementById("dropdown-menu").classList.toggle("show");
+  document.getElementById("drop-menu").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.addEventListener('click',  function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsById("dropdown-menu");
-    for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+    let dropdowns = document.getElementById("dropdown-menu");
+    if (dropdowns.classList.contains('show')) {
+        dropdowns.classList.remove('show');
     }
   }
-}
+
+  if (!event.target.matches('.popbtn')) {
+    let popup = document.getElementById("popup-window");
+    if (popup.classList.contains("show")) {
+      popup.classList.remove("show");
+    }
+  }
+});

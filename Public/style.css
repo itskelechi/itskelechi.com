@@ -332,9 +332,9 @@ footer {
 
 }
 
-.dropdown {
+/* .dropdown {
   position: relative;
-}
+} */
 
 
 /*------------------------------------------------------------------*/
@@ -447,6 +447,8 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  border: 2px inset var(--light-mauve);
+
 }
 
 .dropdown-content,.popup-content a:hover {
@@ -476,7 +478,7 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
   border-color: #555 transparent transparent transparent;
 }
 
-/* display dropdown */
+/* display dropdown & popup */
 .show {
   display: block;
 }

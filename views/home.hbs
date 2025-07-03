@@ -12,7 +12,7 @@
             </div>
             <div class="window-body">
               <p>
-                <img src = "SiteImages/gallery/man-on-saturn.jpg" class="windowIcon">
+                <img src = "./SiteImages/gallery/man-on-saturn.jpg" class="windowIcon">
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@
                 Grab a seat, let’s make something amazing, and i promise i'll bring pizza.
             </p>
             <p style="float: right; padding-bottom: 1rem;">
-                <img src = "SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
+                <img src = "./SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
              
             </div>
           </div>
@@ -67,7 +67,7 @@
        <div class="input" style="margin: 0.5rem;">
         <input type="text" name="query" id= "searchInput" placeholder="What'cha looking for?" required>
           <button type="submit" onclick="search()">
-            <img src="SiteImages/search-btn.png" alt="Search">
+            <img src="./SiteImages/search-btn.png" alt="Search">
           </button>
       </div>
       <!--photo-->
@@ -76,7 +76,7 @@
             <div class="title-bar-text"><br></div>
           </div>
           <div class="window-body">
-            <img src = "SiteImages/gallery/pond.jpg" class="windowIcon">
+            <img src = "./SiteImages/gallery/pond.jpg" class="windowIcon">
           </div>
         </div>
         
@@ -86,11 +86,11 @@
           
             <li> 
               <a href="https://www.facebook.com/theredgirlcompany" target="_blank" class="sm-btn">
-                <img src="SiteImages/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
+                <img src="./SiteImages/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
               </a>
           
               <a href="https://www.instagram.com/mpdbg.jpg/" target="_blank" class="sm-btn">
-                <img src="SiteImages/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
+                <img src="./SiteImages/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
               </a>
             
               <a href="https://www.linkedin.com/in/kelechi-ariwodo-735545114/" target="_blank" class="sm-btn">
@@ -98,12 +98,12 @@
               </a>
     
               <a href="https://open.spotify.com/user/12172732320?si=b77411fc88ca40ae" target="_blank" class="sm-btn">
-                <img src="SiteImages/Icons/spotify.png" alt="Spotify" class="sm-icon">
+                <img src="./SiteImages/Icons/spotify.png" alt="Spotify" class="sm-icon">
               </a>
             </li>
             
             <li>
-                <button class="dropbtn" onclick="toggleDropdown()">My Resumé</button>
+                <button class="dropbtn" onclick="toggleDropdown()" id="drop-menu">My Resumé</button>
                 <div id="dropdown-menu" class="dropdown-content">
                   <a href="https://itskelechi.neocities.org/intro" target="_blank">View Resumé</a>
                   <a href="KAResume.pdf" download>Download Resumé</a>
@@ -125,7 +125,7 @@
      
       <!--container end-->
       
-    <script src="Scripts/download.js"> </script>
-    <script src="Scripts/dropdown.js"></script>
-    <script src="Scripts/script.js"></script>
-        <script src="Scripts/search.js"></script>
+    <script src="./js/download.js"> </script>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/script.js"></script>
+        <script src="./js/search.js"></script>
