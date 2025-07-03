@@ -1,34 +1,26 @@
-<footer>
-       <div class = "footer-nav">
-        start button
-        <div class="button" style="justify-content; center;">
-            <button type="submit" class="dropbtn" onclick="toggleDropdown()"> 
-              <img src="SiteImages/start-btn.png" alt="Start" style="width:100%">
-            </button> 
-            <div id="dropdown-menu" class="dropdown-content">
-              <a href="https://itskelechi.neocities.org/home">Home</a>
-              <a href="https://itskelechi.neocities.org/intro">About</a>
-              <a href="https://itskelechi.neocities.org/schedule">Schedule</a>
-              <a href="https://itskelechi.neocities.org/projects">Projects</a>
-              <a href="https://itskelechi.neocities.org/blog">Blogs</a>
+<footer>        
+    <!--Start Pop Up-->
+        <div class="footer-nav">
+                <!--start button-->
+          <div class="button" style="justify-content; center;">
+            <button type="submit" class="popbtn" onclick="togglePopup()">
+              <img src="SiteImages/buttons/start-btn.png" alt="Start">
+            </button>
+            <div id="popup-window" class="popup-content">
+              <a href="home.html">Home</a>
+              <a href="intro.html">About</a>
+              <a href="schedule.html">Schedule</a>
+              <a href="projects.html">Projects</a>
+              <a href="blog.html">Blogs</a>
             </div>
+          </div>
         </div>
-      </div>
-
-        <!--copyright-->
-        <p id="copyright" style="font-size: 8px; justify-content: center;">legal mumbo jumbo</p>
-        <br>
-         <!--time stamp-->
-        <p id="last" style="font-size: 8px; justify-content: end;"> may the force be with you </p>
-      </div>
-      
-      
+      </footer>
+    <script src="Scripts/popup.js"></script>
     <script src="Scripts/download.js"> </script>
     <script src="Scripts/dropdown.js"></script>
     <script src="Scripts/script.js"></script>
-        <script src="Scripts/search.js"></script>
-
-    `</footer>
+    <script src="Scripts/search.js"></script>
 
   </body>
 </html>

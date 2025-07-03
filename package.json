@@ -27,5 +27,13 @@
   "description": "We've been waiting for you",
   "version": "1.0.0",
   "main": "server.js",
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itskelechi/itskelechi.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itskelechi/itskelechi.com/issues"
+  },
+  "homepage": "https://github.com/itskelechi/itskelechi.com#readme"
 }
