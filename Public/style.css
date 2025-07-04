@@ -4,6 +4,8 @@
   box-sizing: border-box;
   scrollbar-width: auto; 
   scrollbar-color: #c38da2 #eeded2;
+  font-family: "Silkscreen", sans-serif;
+
 }
 
 :root {
@@ -28,6 +30,36 @@
   cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
 }
 
+
+* ::-webkit-scrollbar{
+  width: 8px; /* Width of the scrollbar */
+  border: 2px outset var(--white);
+  border-radius: 0;
+}
+
+* ::-webkit-scrollbar-track{
+  background-color: var(--cream); 
+  border-radius: 0;
+
+}
+
+* ::-webkit-scrollbar-thumb{
+  background-color: var(--light-mauve); /* Scrollbar thumb color */
+  border-radius: 0;
+  border: 3px inset var(--cream); /* Adds padding inside the thumb */
+}
+
+* ::-webkit-scrollbar-thumb:hover{
+  background-color: var(--mauve-pink); /* Hover color for the scrollbar thumb */
+  border-radius: 0;
+
+}
+
+* ::selection{
+  background-color: var(--hunter-green);
+}
+
+
 body {
     background-color: var(--background-pink);
     background-image: url('./SiteImages/layout/site-background.png');
@@ -49,6 +81,8 @@ main{
   min-width: 375px;
 }
 
+/*------------------------------------------------------------------*/
+/*Fonts*/
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
@@ -56,7 +90,6 @@ main{
   color: var(--mauve-pink);
 
 }
-
 
 .pixelify-sans-pixelify {
   font-family: "Pixelify Sans", sans-serif;
@@ -67,7 +100,7 @@ main{
 }
 
 h1{
-  font-family: "Silkscreen", sans-serif;
+  /* font-family: "Silkscreen", sans-serif; */
   font-weight: 400;
   font-style: normal;
   font-size: 4rem;
@@ -105,34 +138,9 @@ p{
   font-size: 28px;
     color: var(--mauve-pink);
 }
-* ::-webkit-scrollbar{
-  width: 8px; /* Width of the scrollbar */
-  border: 2px outset var(--white);
-  border-radius: 0;
-}
 
-* ::-webkit-scrollbar-track{
-  background-color: var(--cream); 
-  border-radius: 0;
-
-}
-
-* ::-webkit-scrollbar-thumb{
-  background-color: var(--light-mauve); /* Scrollbar thumb color */
-  border-radius: 0;
-  border: 3px inset var(--cream); /* Adds padding inside the thumb */
-}
-
-* ::-webkit-scrollbar-thumb:hover{
-  background-color: var(--mauve-pink); /* Hover color for the scrollbar thumb */
-  border-radius: 0;
-
-}
-
-* ::selection{
-  background-color: var(--hunter-green);
-}
-
+/*------------------------------------------------------------------*/
+/*Pages*/
 
 .home-page {
     height: 100vh; 
@@ -148,7 +156,7 @@ p{
     background-image: url('./SiteImages/layout/site-landing.png');
     background-size: cover;
     background-position: center; 
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
   }
 #waitroom{
     background-image: url('./SiteImages/layout/lounge.jpg');
@@ -158,7 +166,8 @@ p{
 
   }
 
-/*--------------Header-----------------*/
+/*------------------------------------------------------------------*/
+/*Header*/
 header {
   display: flex;
   justify-content: space-between;
@@ -207,13 +216,9 @@ header {
   color: var(--light-mauve);
 }
 
-/*.header-nav .button a:visited button {*/
-/*  background-color: #a0c8d4;*/
-/*  color: var(--mauve-pink);*/
-/*}*/
 
-/*------------------------------------------------------------------*/
-
+/*------------------------------------------------------------------*
+/*Containers*/
 main {
     display: flex;
     flex-direction: column;
@@ -221,7 +226,7 @@ main {
     align-items: center;
     width: 100%;
     margin-top: 3rem;
-    max-width: 1440px;
+    /* max-width: 1780px; */
     margin-left: auto;
     margin-right: auto;
     padding: 0.75rem;
@@ -238,6 +243,9 @@ main {
     max-width: 1440px; 
     justify-content: center;
 }
+
+/*------------------------------------------------------------------*/
+/*Images*/
 img.cloud{
       float: center;
       width: 100%;
@@ -248,69 +256,36 @@ img.start{
   width: 100%;
   height: auto;
   float: left;
-  /* clear: left; */
+  object-fit: cover;
 }
-/*------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------*/
-
 /*footer*/
 
 footer {
-  display: flex;
+  display: inline-flex;
   bottom: 0;
-  justify-content: left;
-  align-content: center;
+  /* justify-content: left; */
+  /* align-content: center; */
   width: 100%;
-  /* font-family: "Silkscreen", sans-serif; */
   font-size: 12px;
   border: 3px outset var(--white); 
   background-color: var(--cream);
   color: var(--light-mauve);
-  /* transition: var(--background-pink) 0.3s ease, color 0.3s ease; */
-  /* box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream); */
-  height: 10%
+  padding-top: 2px;
+  height: 7%
 }
 
 .footer-nav {
-  display: flex;
+  display: inline;
   /*flex-grow: 1;*/
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   flex-wrap: wrap;
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding-bottom: 20px;
-}
-
-.footer-nav .button {
-  flex-grow: 1;
-  flex-basis: 0;
-  justify-content: left;
-  width: 150px;
-  
-}
-
-.footer-nav .button a button {
-  color: var(--light-mauve);
-  background-color: var(--cream);
-  border: 4px inset var(--light-mauve);
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
-  transition: var(--background-pink) 0.3s, color 0.3s;
-  text-align: center;
-  box-shadow: 3px 3px var(--dark-mauve), 0 0 0 3px var(--light-mauve);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  height: auto;
-}
-
-.footer-nav .dropUpbtn button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  /* padding-bottom: 20px; */
 }
 
 .footer-nav .dropUpbtn {
@@ -321,7 +296,7 @@ footer {
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   box-shadow: 3px 3px #824255, 0 0 0 3px var(--light-mauve);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 50px;
@@ -332,15 +307,14 @@ footer {
 
 }
 
-/* .dropdown {
-  position: relative;
-} */
-
 
 /*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
 
+/*Forms*/
 
-button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
+button,legend,select,option,table
+,.tree-view,.window,.title-bar,li [role=tab]{
     font-family: "Silkscreen", sans-serif;
     /*padding: 5px 10px;*/
     border: 3px outset var(--white); 
@@ -350,6 +324,19 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
     cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
     width: 100%;
+}
+
+form{
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: var(--mauve-pink);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 1rem;
 }
 
 .input, textarea, input{
@@ -418,71 +405,77 @@ button,legend,select,option,table,.tree-view,.window,.title-bar,li [role=tab]{
     padding: 4px;
 }
 
+/*------------------------------------------------------------------*/
+
+/*DropMenus, Popups*/
+
+.drop-menu {
+  position: relative;
+
+}
+
+
 .dropbtn, .dropUpbtn {
   font-family: "Silkscreen", sans-serif;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px;
 }
 
 
 .dropUp-content{
-    bottom: 100%;
-    margin-bottom: 5px;
-}
-
-.dropdown-content, .dropUp-content {
   display: none;
   position: absolute;
   background-color: #eddde3;
-  min-width: 150px;
+  min-width: 350px;
+  height: auto;
   box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
-  z-index: 10;
+  z-index: 1;
   left: 0;
+  bottom: 100%;
+  margin-bottom: 5px;
+  border: 2px inset var(--white);
+
 }
 
-.dropdown-content, .dropUp-content a {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eddde3;
+  width: 100%;  /* z-index: 1; */
+    box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+      border: 2px inset var(--white);
+
+
+}
+
+.dropdown-content a
+, .dropUp-content a {
   color: var(--light-mauve);
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
-  border: 2px inset var(--light-mauve);
 
 }
 
-.dropdown-content,.dropUp-content a:hover {
+.dropdown-content a:hover
+,.dropUp-content a:hover {
   background-color: var(--mint-green) ;
   color: black;
-}
-
-.dropUp .dropUp-content {
-  visibility: hidden;
-  text-align: center;
-  border-radius: 6px;
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* dropUp arrow */
-.dropUp .dropUp-content::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  transform: scale(1.05);
 }
 
 /* display dropdown & dropUp */
 .show {
-  display: block;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  
 }
 
+
+/*------------------------------------------------------------------*/
+
+/*buttons*/
 button:hover {
     background-color: var(--mint-green);
     color: var(--mauve-pink);
@@ -502,18 +495,7 @@ button:disabled {
   cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
-form{
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  color: var(--mauve-pink);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 0.25rem;
-  align-items: center;
-  padding: 1rem;
-}
+
 
 button:focus,
 input[type="submit"]:focus,
@@ -541,6 +523,10 @@ input[type="reset"]:disabled,
 :disabled + label {
   text-shadow: 1px 1px 0 var(--button-highlight);
 }
+
+/*------------------------------------------------------------------*/
+
+/*Cards & windows*/
 .card{
   font-family: "Silkscreen", sans-serif;
   padding: 1rem;
@@ -683,33 +669,32 @@ input[type="reset"]:disabled,
 }
 
 .sm-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--cream);
-      color: var(--light-mauve); 
-      border: 3px outset var(--white);
-      padding: 5px;
-      text-decoration: none; 
-      width: fit-content;
-      box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+  color: var(--light-mauve); 
+  border: 3px outset var(--white);
+  padding: 5px;
+  text-decoration: none; 
+  width: fit-content;
+  box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-    .sm-btn:hover {
-      transform: scale(1.05);
-      background-color: var(--mint-green);
-      color: var(--mauve-pink);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
+.sm-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--mint-green);
+  color: var(--mauve-pink);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-    .sm-icon {
-      width: 45px;
-      height: 45px;
-    }
+.sm-icon {
+  width: 50px;
+  height: 50px;
+}
 
 /*------------------------------------------------------------------*/
-
 
 /*Gallery*/
 .gallery-container {
@@ -764,6 +749,7 @@ input[type="reset"]:disabled,
   scrollbar-width: thin; /* Sets scrollbar width to a thinner version */
   scrollbar-color: var(--light-mauve) var(--cream); /* thumb color and track color */
 }
+
 /*------------------------------------------------------------------*/
 
 .nav{
@@ -776,6 +762,8 @@ input[type="reset"]:disabled,
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/*------------------------------------------------------------------*/
 
 /*Links*/
 a{
@@ -792,14 +780,35 @@ a:hover {
 }
 
 
+/*------------------------------------------------------------------*/
+.info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
 
-#copyright,
+#copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 1px 1px 0px var(--white);
+  font-size: small;
+
+}
+
 #last {
-    margin: 0; 
-    padding: 0; 
-    line-height: 1; 
-    display: inline-block;
+  padding: 2px 4px;
+  /* border: 2px outset var(--white); */
+  /* box-shadow: inset 3px 3px 0px var(--light-mauve), inset -3px -3px 0px var(--light-pink); */
+  margin-left: auto;
+    font-size: smaller;
+}
+
+#last p{
     font-size: small;
+
 }
 /*------------------------------------------------------------------*/
 

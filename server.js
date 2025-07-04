@@ -39,5 +39,5 @@ app.get('/contactus', (req, res) => {
 
 // Start server
 app.listen(port, () => 
-  console.log(`Have you been to the Port 3000? The Server is strutting her stuff there: http://localhost:${port}`)
+  console.log(`Have you been to http://localhost:${port} ? The Server is strutting her stuff there!`)
 );
