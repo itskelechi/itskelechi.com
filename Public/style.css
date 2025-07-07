@@ -15,9 +15,12 @@
   --mauve-pink: #a55280; /* text colour, window frame*/
   --light-mauve: #c38da2; /* header background, button text, dialog*/
   --dark-mauve: #824255;
+  --disabled-pink: #c6afb9;
   --cream: #eeded2; /* button fill (standard) */
   --mint-green: #cdffd8;  /* button hover colour */
+  --pale-green: #bbd6be;
   --sky-blue: #94b9ff; /* button visited */
+  --baby-blue: #a0c8d4;
   --black: #000000; /* special text dark mode */
   --white: #ffffff; /* special text light mode, button highlight */
   --baby-pink: #e0c5d0; /*button border*/
@@ -100,7 +103,7 @@ main{
 }
 
 h1{
-  /* font-family: "Silkscreen", sans-serif; */
+  font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 4rem;
@@ -108,12 +111,14 @@ h1{
 }
 
 h2{
+  font-family: "Silkscreen", sans-serif;
   font-size: 3rem;
-    color: var(--mauve-pink);
+  color: var(--mauve-pink);
 
 }
 
 h3{
+  font-family: "Silkscreen", sans-serif;
   font-size: 2rem;
     color: var(--mauve-pink);
     font-weight: normal;
@@ -152,19 +157,29 @@ p{
     margin: 1rem;
 }
 
+#frontpage, #waitroom, #err404{
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  z-index: 0;
+}
 #frontpage{
-    background-image: url('./SiteImages/layout/site-landing.png');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-  }
+  background-image: url('./SiteImages/layout/site-landing.png');
+}
 #waitroom{
-    background-image: url('./SiteImages/layout/lounge.jpg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-
-  }
+  background-image: url('./SiteImages/layout/lounge.jpg');
+}
+#err404{
+  background-image: url('./SiteImages/layout/e404.jpg');
+}
 
 /*------------------------------------------------------------------*/
 /*Header*/
@@ -198,7 +213,7 @@ header {
 }
 
 .header-nav .button a button {
-  color: var(--light-mauve);
+  color: var(--mauve-pink);
   width: 100%;
   padding: 10px 20px;
   background-color: var(--cream);
@@ -306,6 +321,10 @@ footer {
   background-position: center;
 
 }
+ .dropUp-content a:visited,
+ .dropdown-content a:visited {
+  color: var(--mauve-pink);
+}
 
 
 /*------------------------------------------------------------------*/
@@ -319,7 +338,7 @@ button,legend,select,option,table
     /*padding: 5px 10px;*/
     border: 3px outset var(--white); 
     background-color: var(--cream);
-    color: var(--light-mauve);
+    color: var(--mauve-pink);
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
@@ -365,7 +384,7 @@ form{
   border: inset;
   border-right: 3px inset var(--light-mauve);
   background-color: var(--cream);
-  color: var(--light-mauve);
+  color: var(--mauve-pink);
   outline: none;
 }
 
@@ -426,7 +445,7 @@ form{
 .dropUp-content{
   display: none;
   position: absolute;
-  background-color: #eddde3;
+  background-color: var(--cream);
   min-width: 350px;
   height: auto;
   box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
@@ -441,17 +460,17 @@ form{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #eddde3;
+  background-color: var(--cream);
   width: 100%;  /* z-index: 1; */
-    box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
-      border: 2px inset var(--white);
+  box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+  border: 2px inset var(--white);
 
 
 }
 
 .dropdown-content a
 , .dropUp-content a {
-  color: var(--light-mauve);
+  color: var(--mauve-pink);
   padding: 12px 16px;
   text-decoration: none;
 
@@ -460,7 +479,7 @@ form{
 .dropdown-content a:hover
 ,.dropUp-content a:hover {
   background-color: var(--mint-green) ;
-  color: black;
+  color: var(--black);
   transform: scale(1.05);
 }
 
@@ -489,8 +508,8 @@ button:active {
 }
 
 button:disabled {
-    background-color: #c6afb9;
-    color: #ffffff;
+    background-color: var(--disabled-pink);
+    color: var(--white);
  /*border: 3px outset #fff #e6bed4;*/
   cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
@@ -536,7 +555,7 @@ input[type="reset"]:disabled,
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   width: 100%;
-  box-shadow: 3px 3px var(--light-mauve) , 0 0 0 3px #bbd6be;
+  box-shadow: 3px 3px var(--light-mauve) , 0 0 0 3px var(--pale-green);
   border-style: outset;
 }
 
@@ -578,7 +597,7 @@ input[type="reset"]:disabled,
 }
 
 .window-body button:active {
-    background-color: #a0c8d4;
+    background-color: var(--baby-blue);
     color: var(--mauve-pink);
     box-shadow: 0 5px var(--light-mauve);
     transform: translateY(2px);
@@ -587,8 +606,8 @@ input[type="reset"]:disabled,
 }
 
 .window-body button:disabled {
-    background-color: #c6afb9;
-    color: #ffffff;
+    background-color: var(--disabled-pink);
+    color: var(--white);
  /*border: 3px outset #fff #e6bed4;*/
   cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
@@ -694,6 +713,11 @@ input[type="reset"]:disabled,
   height: 50px;
 }
 
+.m-icon {
+  width: 100px;
+  height: 100px;
+}
+
 /*------------------------------------------------------------------*/
 
 /*Gallery*/
@@ -772,11 +796,11 @@ color: var(--mauve-pink);
 }
 
 a:visited {
-  color: #a0c8d4;
+  color: var(--sky-blue);
 }
 
 a:hover {
-  color: #bbd6be;
+  color: var(--mint-green);
 }
 
 
@@ -809,6 +833,25 @@ a:hover {
 #last p{
     font-size: small;
 
+}
+
+.tooltip{
+  position: fixed;
+  display: flex;
+}
+
+.tooltip .tooltiptext{
+  visibility: hidden;
+  /* width: 120px; */
+  background-color: var(--mint-green);
+  color: var(--black);
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+}
+.tooltip:hover .tooltiptext{
+  visibility: visible;
 }
 /*------------------------------------------------------------------*/
 

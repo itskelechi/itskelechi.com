@@ -4,39 +4,83 @@ const port = 3000;
 
 const { engine } = require('express-handlebars');
 
-app.set('view engine', 'hbs');
 app.engine('hbs', engine({ 
-  layoutsDir: `${__dirname}/views/layouts`
- ,extname: 'hbs'
- ,defaultLayout: 'index'
- ,partialsDir: `${__dirname}/views/partials`
+  extname: 'hbs',
+  layoutsDir: `${__dirname}/views/layouts`,
+  defaultLayout: 'index',
+  partialsDir: `${__dirname}/views/partials`
 }));
+
+app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
 app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('main', { layout: 'buffer' })
+  res.render('main', {
+    PageTitle: 'We\'ve been waiting for you',
+    metaDesc: 'Welcome to Kelechi\'s Portfolio',
+    layout: 'buffer' 
+  });
 });
   
 app.get('/home', (req, res) => {
-  res.render('home', { layout: 'index' });
+  res.render('home',{
+    PageTitle: 'Heyyy Girlie!!!',
+    metaDesc: 'Welcome to Kelechi\'s Portfolio',
+    layout: 'index' 
+  });
 });
   
-app.get('/intro', (req, res) => {
-  res.render('intro', { layout: 'index' });
+app.get('/about', (req, res) => {
+  res.render('intro', {
+    PageTitle: 'a lil about me👋🏿',
+    metaDesc: 'About Kelechi',
+    layout: 'index' 
+  });
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects', { layout: 'index' });
+  res.render('projects', {
+    PageTitle: 'K\'s Portfolio ✨',
+    metaDesc: 'The Repertoire',
+    layout: 'index' 
+  });
 });
 
-app.get('/contactus', (req, res) => {
-  res.render('contactme', { layout: 'index' });
+app.get('/contact', (req, res) => {
+  res.render('contactme', {
+    PageTitle: 'We\'ve been waiting for you',
+    metaDesc: 'Welcome to Kelechi\'s Portfolio',
+    layout: 'index' 
+  });
 });
 
+app.get('/poems', (req, res) => {
+  res.render('poems', {
+    PageTitle: 'ཐི❤︎ཋྀ',
+    metaDesc: 'some musings I\'ve written...',
+    layout: 'index' 
+  });
+});
 
+app.use((req, res) => {
+  res.status(404).render('404', {
+    PageTitle: 'INTRUDER!',
+    metaDesc: 'For Legal Purposes, this page doesn\'t exist',
+    layout: 'buffer' 
+  });
+});
+
+// // Handle 500 errors
+// app.use((err, req, res, next) => {
+//   console.error(err.stack);
+//   res.status(500).render('500', {
+//     PageTitle: 'Server Error',
+//     layout: 'buffer'
+//   });
+// });
 // Start server
 app.listen(port, () => 
   console.log(`Have you been to http://localhost:${port} ? The Server is strutting her stuff there!`)
