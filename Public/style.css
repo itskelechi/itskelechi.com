@@ -77,12 +77,6 @@ body {
     width: 100%;
 }
 
-main{
-  display: flex;
-  flex-direction: column;
-  font-family: "Silkscreen", sans-serif; 
-  min-width: 375px;
-}
 
 /*------------------------------------------------------------------*/
 /*Fonts*/
@@ -235,19 +229,18 @@ header {
 /*------------------------------------------------------------------*
 /*Containers*/
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 3rem;
-    /* max-width: 1780px; */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.75rem;
-    box-sizing: border-box;
-     
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  font-family: "Silkscreen", sans-serif; 
+  min-width: 375px;
 }
 
 .container {
@@ -655,6 +648,7 @@ input[type="reset"]:disabled,
   letter-spacing: 0;
   margin-right: 24px;
   padding-left: 4px;
+  font-size: 24px;
   
 }
 .title-bar-spotify-text {
@@ -662,7 +656,9 @@ input[type="reset"]:disabled,
   color: #000;
   letter-spacing: 0;
   margin-right: 24px;
-    padding-left: 4px;  
+  padding-left: 4px;  
+  font-size: 24px;
+
 }
 
 .title-bar-controls {

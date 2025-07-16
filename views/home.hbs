@@ -1,131 +1,178 @@
-      <div class="container">
-        <div id="left-column">
-          <div class="button" style="justify-content; center; padding: 1rem auto;">
-            <a href="waitroom.html" target="_blank">
-              <button type="submit" style="padding: 0.5rem 0"> Get In Touch </button> </a>
-          </div>
-        
-          <!--photo-->
-          <div class="window" style="margin: 0.5rem; width: 75%; height: auto;">
-            <div class="title-bar-spotify" style="gap: 3rem;">
-                <div class="title-bar-text"><br></div>
-            </div>
-            <div class="window-body">
-              <p>
-                <img src = "./SiteImages/gallery/man-on-saturn.jpg" class="windowIcon">
-              </p>
-            </div>
-          </div>
-          
-          <!--spotify-->
-          <div class="window-spotify" style="margin: 0.5rem 0; width: 100%; height: auto;">
-            <div class="title-bar-spotify" style="">
-              <div class="title-bar-text"><br></div>
-            </div>            
-            <div class="window-body" >
-              <iframe style="border-radius:0px" src="https://open.spotify.com/embed/playlist/4WNH0tEgzMePmyjDe2Okym?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay;" loading="lazy"></iframe>
-            </div>
-          </div>
-          
-        </div>
-        <!--left-col end-->
-        
-        <div id="center-column">
-         
-          <div class="window" style="margin: 3.5rem 0.5rem; width: 80%; height: auto;">
-            <div class="title-bar" >
-                <div class="title-bar-text">Welcome to My Pink Paradise!</div>
-            </div>
-            <div class="window-body">
-              <p class="pixelify-sans-pixelify">Hi! I’m Kelechi!</p>
-              <br>
-              <p class="pixelify-sans-pixelify" style="font-size:12px">And if there’s one thing you should know about me, it’s that I'm obsessed with bold vibes, creative chaos, (and, yes, all things pink). Seriously, if it’s not pink, make it pink quickly!!! (except in my fashion expression where my clothes tend to lean more umm--- <em>gothic</em> ) </p>
-              <br>
-              <p class="pixelify-sans-pixelify">
-                This little corner of the web is where tech meets style, and where femininity isn’t just the appreciated—it’s practically throwing a party with confetti cannons. I’m all about coding cool things by day and creating design magic by night (with an explosion of visual texture, obviously). </p>
-                
-              <br>
-              <p class="pixelify-sans-pixelify">
-                <em>So, if you like breaking the rules, making things pop, and believe that everything is better with a touch of pink? </em><p>
-                <br>
-                <h1 style="text-align: center; font-size: 21px">
-                <b>WELCOME !</b></h1>
-                <br>
-                <p class="pixelify-sans-pixelify" style="text-align: center;">
-                Grab a seat, let’s make something amazing, and i promise i'll bring pizza.
-            </p>
-            <p style="float: right; padding-bottom: 1rem;">
-                <img src = "./SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
-             
-            </div>
-          </div>
-        </div>  
-        <!--center col end-->
-        
-        <div id="right-column">
-        <!--search bar-->
-       <div class="input" style="margin: 0.5rem;">
-        <input type="text" name="query" id= "searchInput" placeholder="What'cha looking for?" required>
-          <button type="submit" onclick="search()">
-            <img src="./SiteImages/search-btn.png" alt="Search">
-          </button>
-      </div>
-      <!--photo-->
-        <div class="window" style="margin: 0.5rem; width: 75%; height: 400px;">
-          <div class="title-bar-spotify" style="gap: 3rem;">
-            <div class="title-bar-text"><br></div>
-          </div>
-          <div class="window-body">
-            <img src = "./SiteImages/gallery/pond.jpg" class="windowIcon">
-          </div>
-        </div>
-        
-        <!--social media buttons-->
-        <div>
-          <ul style="list-style-type: none; display: inline-block;">
-          
-            <li> 
-              <a href="https://www.facebook.com/theredgirlcompany" target="_blank" class="sm-btn">
-                <img src="./SiteImages/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
-              </a>
-          
-              <a href="https://www.instagram.com/mpdbg.jpg/" target="_blank" class="sm-btn">
-                <img src="./SiteImages/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
-              </a>
-            
-              <a href="https://www.linkedin.com/in/kelechi-ariwodo-735545114/" target="_blank" class="sm-btn">
-                <img src="SiteImages/Icons/linked-in.png" alt="LinkedIn" class="sm-icon">
-              </a>
+<div class="container">
+
+  <!--left-col -->
+  <div id="left-column">
     
-              <a href="https://open.spotify.com/user/12172732320?si=b77411fc88ca40ae" target="_blank" class="sm-btn">
-                <img src="./SiteImages/Icons/spotify.png" alt="Spotify" class="sm-icon">
-              </a>
-            </li>
-            
-            <li class="drop-menu">
-                <button class="dropbtn" onclick="toggleResumeDropdown()" id="resume-btn">My Resumé</button>
-                <div id="resume-menu" class="dropdown-content">
-                  <a href="intro.hbs" target="_blank">View Resumé</a>
-                  <a href="KAResume.pdf" download>Download Resumé</a>
-                </div>
-            </li>
-            
-          </ul>
-        </div>
+    <!--search bar-->
+    <div class="input" style="margin: 0.5rem;">
+      <input type="text" name="query" id= "searchInput" placeholder="What'cha looking for?" required>
+      <button type="submit" onclick="search()">
+        <img src="./SiteImages/buttons/search-btn.png" alt="Search">
+      </button>
+    </div>
+  
+    <!--photo-->
+    <div class="window photo-window">
+      <div class="title-bar-spotify" style="gap: 3rem;">
+          <div class="title-bar-text"><br></div>
       </div>
-        <!--right-col end-->
+      <div class="window-body">
+        <p>
+          <img src = "./SiteImages/gallery/tub-cropped.jpg" class="windowIcon">
+        </p>
+      </div>
+    </div>
+    
+    <!--spotify-->
+    <div class="window-spotify playlist">
+      <div class="title-bar-spotify" style="">
+        <div class="title-bar-text"><br></div>
+      </div>            
+      <div class="window-body" >
+        <iframe style="border-radius:0px" src="https://open.spotify.com/embed/playlist/4WNH0tEgzMePmyjDe2Okym?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay;" loading="lazy"></iframe>
+      </div>
+    </div>
+    
+  </div>
+  <!--left-col end-->
+
+  <!--center col-->
+  <div id="center-column">
+    
+    <div class="window" style="margin: 3.5rem 0.5rem; width: 80%; height: auto;">
+      <div class="title-bar" >
+          <div class="title-bar-text">Welcome to My Pink Paradise!</div>
+      </div>
+      <div class="window-body">
+        <section class="pixelify-sans-pixelify">
+          <p style="font-size: 32px;"><em>Hi! I’m Kelechi!</em></p>
+
+          <p>
+            If there’s one thing you should know about me, it’s that I'm obsessed with bold vibes, creative chaos, and (yes!) all things pink. Seriously—if it’s not pink, make it pink. Immediately.  
+            <br>
+            (Except in my fashion life, where things tend to drift more... <em class="gothic">gothic.</em> ~ Yeah, that’s a plot twist. )
+          </p>
+
+          <p>
+            This little corner of the web is where tech meets style—where femininity isn’t just embraced, it’s throwing a party with glitter and confetti cannons. I code cool things by day and conjure design magic by night (with an explosion of visual texture, obviously).
+          </p>
+
+          <p>
+            <em>If you love breaking rules, making things pop, and a touch of organized chaos—</em>
+          </p>
+
+          <h1 style="text-align: center; font-size: 21px;">
+            <b>WELCOME!</b>
+          </h1>
+
+          <p style="text-align: center;">
+            Grab a seat, let’s make something amazing. I’ll bring the pizza. 🍕
+          </p>
+
+      <p class="signature">
+          <img src = "./SiteImages/layout/signature.png" class="sign"></p>
+        </section>
 
       </div>
-      <!--container end-->
-      
+    </div>
+  </div>  
+  <!--center col end-->
+
+  <!--right-col-->  
+  <div id="right-column">
+  
+    <div class="button" style="justify-content; center; padding: 1rem auto;">
+      <a href="/contact" target="_blank">
+        <button type="submit" style="padding: 0.5rem 0"> Get In Touch </button> 
+      </a>
+    </div>
+
+  <!--photo-->
+  <div class="window photo-window">
+    <div class="title-bar-spotify" style="gap: 3rem;">
+      <div class="title-bar-text"><br></div>
+    </div>
+    <div class="window-body">
+      <img src = "./SiteImages/gallery/pond.jpg" class="windowIcon">
+    </div>
+  </div>
+  
+  <!--social media buttons-->
+  <div>
+    <ul style="list-style-type: none; display: inline-block;">
     
-     
-     {{> gallery}}
+      <li> 
+        <a href="https://www.facebook.com/theredgirlcompany" target="_blank" class="sm-btn">
+          <img src="./SiteImages/Icons/facebook-icon.png" alt="Facebook" class="sm-icon">
+        </a>
+    
+        <a href="https://www.instagram.com/mpdbg.jpg/" target="_blank" class="sm-btn">
+          <img src="./SiteImages/Icons/instagram-icon.png" alt="Instagram" class="sm-icon">
+        </a>
       
-     
-      <!--container end-->
+        <a href="https://www.linkedin.com/in/kelechi-ariwodo-735545114/" target="_blank" class="sm-btn">
+          <img src="SiteImages/Icons/linked-in.png" alt="LinkedIn" class="sm-icon">
+        </a>
+
+        <a href="https://open.spotify.com/user/12172732320?si=b77411fc88ca40ae" target="_blank" class="sm-btn">
+          <img src="./SiteImages/Icons/spotify.png" alt="Spotify" class="sm-icon">
+        </a>
+      </li>
       
-    <script src="./js/download.js"> </script>
-    <script src="./js/dropdown.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/search.js"></script>
+      <li class="drop-menu">
+          <button class="dropbtn" onclick="toggleResumeDropdown()" id="resume-btn">My Resumé</button>
+          <div id="resume-menu" class="dropdown-content">
+            <a href="intro.hbs" target="_blank">View Resumé</a>
+            <a href="KAResume.pdf" download>Download Resumé</a>
+          </div>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+  <!--right-col end-->
+
+</div>
+<!--container end-->
+
+</main>
+
+
+{{> gallery}}
+
+
+<!--container end-->
+
+<script src="./js/download.js"> </script>
+<script src="./js/dropdown.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/search.js"></script>
+
+<style>
+.window-body p{
+  margin: 0 7px;
+  padding: 7px 0;
+  font-size: 16px;
+}
+.gothic{
+  color: var(--black);
+  font-weight: 600;
+  font-size: larger;
+}
+.signature{
+  float: right; 
+  padding-bottom: 1rem;
+}
+.photo-window{
+  margin: 0.5rem; width: 75%; height: auto;
+}
+.playlist{
+  margin: 0.5rem 0; width: 100%; height: auto;
+}
+img.sign{
+  display: inline-flex; 
+  align-content: right; 
+  max-width: 200px; 
+  height: auto;
+}
+</style>
