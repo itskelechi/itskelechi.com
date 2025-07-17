@@ -356,52 +356,61 @@ form{
   align-items: center;
   justify-content: center;
   width: 100%;
-  /*max-width: fit-content;*/
   overflow: hidden;
-  border: 3px inset var(--light-mauve);
-  box-shadow: 3px 3px #824255, 0 0 0 3px var(--light-mauve);
-  font-family: "Silkscreen", sans-serif;
   /*padding: 1rem;*/
 
 }
+.input{
+  border: 2px solid var(--light-mauve);
+  background-color: var(--cream);
+  padding: 4px;
+  box-shadow: 
+    inset 2px 2px 0 var(--white)
+    inset -2px -2px 0 var(--mauve-pink)
+    2px 2px 0 #824255, 0 0 0 3px var(--mauve-pink);
+    height: 48px;
 
+}
 .label{
   text-align: left;
   padding: 0.25rem;
   
 }
 .input input[type='text']{
-  /*flex-grow: 1;*/
-  font-family: "Pixelated MS Sans Serif", Arial;
-  padding: 10px 15px;
-  border: inset;
-  border-right: 3px inset var(--light-mauve);
+  flex-grow: 1;
+  padding: 12px;
+  border: 2px solid var(--light-mauve);
   background-color: var(--cream);
   color: var(--mauve-pink);
   outline: none;
+  box-shadow: 
+    inset 2px 2px 0px var(--mauve-pink),
+    inset -2px -2px 0px var(--white);
+  margin-left: -8px;
 }
-
 .input button {
-  background-color: transparent;
-  border: 3px outset var(--white);
+  border: 2px outset var(--white);
+  border-top: 3px solid var(--light-mauve);
+
+  transition: background-color 0.3s ease;
+  /* background-color: var(--cream); */
+  margin-right: -4px;
   padding: 0;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  transition: background-color 0.3s ease;
+  width: 56px;
+  height: auto;
+  /* box-shadow: 
+    outset -2px -2px 0px var(---mauve), 
+    outset 2px 2px 0px var(--white); */
 }
 
 .input button img {
   width: 100%;
   height: 100%;
   object-fit: cover; 
-}
-
-.input button:hover {
-  background-color: var(--mauve-pink);
 }
 
 .input input[type="text"]:focus {
