@@ -6,7 +6,7 @@
           </div>
         
           <!--photo-->
-          <div class="window" style="margin: 0.5rem; width: 75%; height: auto;">
+          <div class="window" style="margin: 0.5rem; inline-size: 75%; block-size: auto;">
             <div class="title-bar-spotify" style="gap: 3rem;">
                 <div class="title-bar-text"><br></div>
             </div>
@@ -18,7 +18,7 @@
           </div>
           
           <!--spotify-->
-          <div class="window-spotify" style="margin: 0.5rem 0; width: 100%; height: auto;">
+          <div class="window-spotify" style="margin: 0.5rem 0; inline-size: 100%; block-size: auto;">
             <div class="title-bar-spotify" style="">
               <div class="title-bar-text"><br></div>
             </div>            
@@ -32,7 +32,7 @@
         
         <div id="center-column">
          
-          <div class="window" style="margin: 3.5rem 0.5rem; width: 80%; height: auto;">
+          <div class="window" style="margin: 3.5rem 0.5rem; inline-size: 80%; block-size: auto;">
             <div class="title-bar" >
                 <div class="title-bar-text">Welcome to My Pink Paradise!</div>
             </div>
@@ -54,8 +54,8 @@
                 <p class="pixelify-sans-pixelify" style="text-align: center;">
                 Grab a seat, let’s make something amazing, and i promise i'll bring pizza.
             </p>
-            <p style="float: right; padding-bottom: 1rem;">
-                <img src = "./SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-width: 200px; height: auto;"></p>
+            <p style="float: inline-end; padding-block-end: 1rem;">
+                <img src = "./SiteImages/layout/signature.png" style="display: inline-flex; align-content: right; max-inline-size: 200px; block-size: auto;"></p>
              
             </div>
           </div>
@@ -71,7 +71,7 @@
           </button>
       </div>
       <!--photo-->
-        <div class="window" style="margin: 0.5rem; width: 75%; height: 400px;">
+        <div class="window" style="margin: 0.5rem; inline-size: 75%; block-size: 400px;">
           <div class="title-bar-spotify" style="gap: 3rem;">
             <div class="title-bar-text"><br></div>
           </div>
@@ -115,16 +115,108 @@
       </div>
         <!--right-col end-->
 
-      </div>
-      <!--container end-->
+    </div>
+    <!--container end-->
       
     
      
-     {{> gallery}}
+    {{> gallery}}
       
      
-      <!--container end-->
-      
+    <!--container end-->
+    <style>
+   
+        #left-column, #center-column, #right-column {
+            display: flex;
+            margin: 0.25rem;
+            align-items: center;
+            flex-direction: column;
+            position:relative;
+            margin-inline-end: auto;
+            margin-inline-start: auto;
+        }    
+    
+        #left-column, #right-column {
+            flex: 1;
+            max-inline-size: 20%;
+            gap: 0.125rem;
+            min-inline-size: 10rem;
+        }
+        
+        #right-column {
+            inset-inline-end:0;
+        }
+        
+        #center-column {
+            background-image: url('SiteImages/gallery/spa.jpg');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            flex: 2;
+            margin: 0 auto;
+            max-inline-size: 60%;
+        }
+        
+        #left-column {
+            inset-inline-start:0;
+        }
+        
+        
+        input{
+            /*font-family: "Pixelify Sans", sans-serif;*/
+            padding: 5px 10px;
+            border: 4px inset #c38da2;
+            border-style: outset;
+            /*background-color: #eeded2;*/
+            color: #422c42;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 0 3px #eeded2;
+        }
+        
+        img.windowIcon{
+            float: center;
+            block-size: 350px;
+            inline-size: 100%
+        }
+    
+        iframe {
+            max-inline-size: 100%;
+        }
+
+
+        @media (max-inline-size: 840px) {
+            #left-column, #right-column, #center-column {
+                flex-basis: 100%; 
+                max-inline-size: 100%; 
+                block-size: auto;
+            
+            }
+            #right-column{
+                margin-block-end: 140px: 
+            }
+        }
+
+        ul li button {
+            inline-size: 100%;
+            padding: 0.5rem; 
+            margin-block-start: 0.5rem; 
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        
+        p {
+            font-size: 20px;
+            color: #a55280;
+        }
+        .sm-icon {
+            inline-size: 25px;
+            block-size: 25px;
+        }
+
+    </style>
+    
     <script src="./js/download.js"> </script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/script.js"></script>
