@@ -1,1 +1,29 @@
-    <script src="./js/poems.js"> </script>
+<div class="container">
+    <p>Aren't you glad I didn't make these open new windows.</p>
+</div>
+<style>
+    .popup {
+      position: absolute;
+      border: 4px outset var(--white);
+      background: var(--cream);
+      box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+      z-index: 999;
+      max-width: 90vw;
+      word-wrap: break-word;
+      animation: popin 0.4s ease;
+    }
+    .title-bar-text{
+        font-size: medium;
+    }
+
+    .window-body p {
+      padding: 4px;
+      font-size: small;
+    }
+
+    @keyframes popin {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+</style>    
+    <script src="/js/poems.js"> </script>

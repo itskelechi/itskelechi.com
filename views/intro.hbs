@@ -17,8 +17,8 @@
     </div>
 
     <div class="card">   
-      <h4 >Other fun things about me...</h4>
-      <ol style="padding: 0 3rem">
+      <h5 >Other fun things about me...</h5>
+      <ol>
         <li> I draw and paint (physically, and digitally)</li>
         <li> I consider myself my design nerd - like the fashion+history+architecture trifecta
         <li> I really love <a href="blog.html" target="_blank"> MOVIES </a></li>
@@ -32,6 +32,7 @@
     <div class="window2" style="inline-size: 65%; block-size: auto;">
       <div class="title-bar" style="">
         <div class="title-bar-text" style="font-size: 12px"> Favourite Quote: </div>
+        <button class="close">&#10006;</button>
       </div>            
       <div class="window-body" style="padding: 1rem;">
         <h3 style ="text-align: center; font-style: italic; font-size: 10px">"just here to remind everyone that everything in the world is about love and when it isn't, it's about the absence of love"
@@ -50,10 +51,11 @@
     <div class="window">
       <div class="title-bar" style="">
         <div class="title-bar-text" style="font-size: 24px"> My Resume</div>
+        <button class="close">&#10006;</button>
       </div>    
       
       <div class="window-body" style="justify-content: center; text-align: center; padding: 0.75rem; ">
-        <img src="KAResume.png" alt="Kelechi Ariwodo's Resume" style="border: 3px inset #eeded2;" class="resume">
+        <img src="./SiteImages/KAResume.png" alt="Kelechi Ariwodo's Resume" style="border: 3px inset #eeded2;" class="resume">
         <div style="display: inline-flex; align-content: center; justify-content: center;">
           <button onclick="downloadDoc()">Download </button>
         </div>
@@ -86,7 +88,7 @@
     gap: 0.125rem;
     min-inline-size: 10rem;
     inset-inline-start:0;
-    margin: 0 auto;
+    margin: 0.5rem auto;
     padding: 10px;
   }
   
@@ -100,6 +102,27 @@
     margin: 0 auto;
     padding: 10px;
     max-inline-size: 75%;
+  }
+  .card{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .card h5{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-decoration: none;
+    font-size: clamp(12px, 4vh, 18px);
+  }
+
+  img.resume {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 3px 3px #fff, 0 0 0 3px #eeded2;
+    transition: transform 0.2s;
   }
 
   @media (max-inline-size: 840px) {
