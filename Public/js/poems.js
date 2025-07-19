@@ -1,6 +1,6 @@
 const messages = [
-  "Big Brother is are watching.",
-  "Unexpected Error. Please Investigate.",
+  `Big Brother is are watching.`,
+  `Unexpected Error. Please Investigate.`,
 
   `you smell like old spice.\n
    An old life, old lies.\n 
@@ -11,23 +11,20 @@ const messages = [
    Goodbyes.\n 
    Mine?`,
 
-  "You again? What are you doing here???",
+  `You again? What are you doing here???"`,
 
-  "Windows 11 support ended. You are on your own Kid.",
+  `Windows 11 support ended. You are on your own Kid.`,
 
-  `Your hands are clean\n
-  But the water is stained\n
-  Your face is happy\n
-  But your eyes say pain.\n
-  You did it once, you'll do it again`,
+  `Don't show this message again`,
 
-  "You can't buy happiness but you can by a matcha float which is practically the same thing.",
+  `You can't buy happiness,\n
+   but you can by a matcha float which is practically the same thing.`,
 
-  "404: Boredom Not Found.",
+  `404: Boredom Not Found.`,
 
-  "I like who I am when I miss you",
+  `I like who I am when I miss you"`,
 
-  "You can't shut me down.",
+  `You can't shut me down.`,
 
   `It’s impossible to not notice the change in the earth’s vibrations as it approaches \n
   The crowd walks up to the edge in anticipation, waiting Patience \n
@@ -54,9 +51,12 @@ const messages = [
   It’s impossible to not notice the change in the earth’s vibrations as it approaches \n
   The crowd walks up to the edge in anticipation, waiting.`,
 
-  "Don't click the big X.",
+  `Don't click the big X.`,
 
-  "The thing about presents is eventually all the paper is trash and all you’re left with is what was disguised and and then - only then- can you, in all sincerity, confess that you love it."
+  `The thing about presents is eventually all the paper is trash and all you’re left with is what was disguised and and then - only then- can you, in all sincerity, confess that you love it.`,
+
+  `❤ ❤ ❤ ❤ ♡`,
+
 ];
 const titles = [
     "They are watching...",
@@ -72,7 +72,8 @@ const titles = [
   "Sample Text",
   "Don't. STOP!",
   "POEM #5.",
-  "Fail."
+  "System Error.",
+  "Lives Remaining"
 ]; // Just using same list for now
 
 window.onload = function () {
@@ -88,10 +89,10 @@ window.onload = function () {
         let estimatedWidth = Math.min(Math.max(message.length * avgCharWidth / 2 + padding, 200), 500);
 
         const left = Math.floor(Math.random() * (window.innerWidth - estimatedWidth));
-        const top = Math.floor(Math.random() * (window.innerHeight - 150)); // assume base height
+        const top = Math.floor(Math.random() * (window.innerHeight - 50)); // assume base height
 
         const popup = document.createElement('div');
-        popup.classList.add('window', 'popup');
+        popup.classList.add('window2', 'popup');
         popup.style.width = `${estimatedWidth}px`;
         popup.style.left = `${left}px`;
         popup.style.top = `${top}px`;
@@ -103,14 +104,20 @@ window.onload = function () {
         popup.innerHTML = `
         <div class="title-bar">
             <div class="title-bar-text">${title}</div>
-            <button class="close">&#10006;</button>
+            <div class="title-bar-ctrl">
+                <button class="close" id="mini">&#95;</button>
+                <button class="close" id="XCls">&#10006;</button>
+            </div>
         </div>
         <div class="window-body" style="font-size:12px">
             <p>${message}</p>
+            <span class="hired">Am I hired or what?</span>
         </div>
         `;
 
-        popup.querySelector('.close').onclick = () => popup.remove();
+        popup.querySelector('#mini').onclick = () => popup.re();
+        popup.querySelector('#XCls').onclick = () => popup.remove();
+
 
         document.body.appendChild(popup);
     }
