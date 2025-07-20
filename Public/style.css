@@ -381,6 +381,9 @@ form{
   justify-content: center;
   width: 100%;
   overflow: hidden;
+  border: 3px inset var(--light-mauve);
+  box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
+  font-family: "Silkscreen", sans-serif;
 <<<<<<< HEAD
   border: 3px inset var(--light-mauve);
   box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
