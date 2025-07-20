@@ -243,11 +243,12 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
     /* max-width: 1780px; */
     margin-left: auto;
     margin-right: auto;
-    padding: 0.75rem;   
+    padding: 0.75rem;  
+    min-width: 375px;
 =======
   display: flex;
   flex-direction: column;
