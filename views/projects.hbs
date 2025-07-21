@@ -1,43 +1,100 @@
 <div class="container">
     
         <!--comment section-->
-    <div id="left-column">
-      </div>
-    
-    
-     <!--poster designs-->
-    <div>
-      <div class="window" style="margin: 0.5rem; width:100%; height:auto;">
-      <div class="title-bar">
-        <div class="title-bar-text" style="font-size: 24px">Graphic Design is my passion</div>
-      </div>
-      <div class="window-body" style="justify-content: center; text-align: center; padding: 0.75rem;">
+<div id="left-column">
+  {{>contactform}}
+</div>
 
-          <div class="gallery-container">
-            <div id="pdf-details">
-              <h2 id="pdf-title" style="font-size:24px">Title Here</h2>
-              <!--<p id="pdf-description">Description here.</p>-->
-            </div>
-            <div style=" border: inset">
-              <img id="pdf-viewer" src="" alt="Gallery Image" style="max-width: 100%; height: auto;" />      
-      
-              <div id="pdf-details">
-                <p id="pdf-description" style="font-size:16px">Description here.</p>
-              </div>
-            </div>
-    
-            <div id="navigation" style="display: flex; justify-content:center" >
-              <button id="prev-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/prev-btn.png"  style="max-width: 6vw"></button>
-              <button id="next-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/next-btn.png"  style="max-width: 6vw"></button>
-            </div> 
+<div id="right-column">
+  <div class="tabs-window">
+    <div class="tab-bar">
+      <button class="tab-button" data-tab="tab1">Graphic Design</button>
+      <button class="tab-button" data-tab="tab2">Web Dev</button>
+      <button class="tab-button" data-tab="tab3">projects</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="gallery-container">
+          <div id="pdf-details">
+            <h2 id="pdf-title" style="font-size:24px">Title Here</h2>
           </div>
+          <div style="border: 3px inset #fff;">
+            <img id="pdf-viewer" src="" alt="Gallery Image" style="max-width: 100%; height: auto;" />      
+            <div id="pdf-details">
+              <p id="pdf-description" style="font-size:16px">Description here.</p>
+            </div>
+          </div>
+          <div id="navigation" style="display: flex; justify-content:center;" >
+            <button id="prev-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/prev-btn.png"  style="max-width: 5vw"></button>
+            <button id="next-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/next-btn.png"  style="max-width: 5vw"></button>
+          </div> 
+        </div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <p>web dev sc coming</p>
+      </div>
+      <div class="tab-pane" id="tab3">
+        <p>💻✨</p>
       </div>
     </div>
-    </div>
-    <script src=".js/carousel.js"> </script>
-    <script src=".js/dropdown.js"></script>
-    <script src=".js/script.js"></script>
-    <script src=".js/comment.js"></script>
+  </div>
+</div>
+<style>
+  #left-column, #right-column {
+    display: flex;
+    margin: 0.25rem;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+  }    
+
+  #left-column {
+    background-image: url('SiteImages/gallery/pond.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    flex: 1;
+    inset-inline-start: 0;
+    max-inline-size: 25%;
+    gap: 0.125rem;
+    min-inline-size: 10rem;
+    inset-inline-start:0;
+    margin: 0.5rem auto;
+    padding: 10px;
+  }
+  
+  #right-column {
+    background-image: url('SiteImages/gallery/tub.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    inset-inline-end: 0;
+    flex: 2;
+    margin: 0 auto;
+    padding: 10px;
+    max-inline-size: 75%;
+  }
+
+    @media (max-inline-size: 840px) {
+    #left-column, #right-column {
+        flex-basis: 100%; 
+        max-inline-size: 100%; 
+        block-size: auto;
+    
+    }
+    #right-column{
+        margin-block-end: 140px: 
+    }
+  }
+</style>
+
+    <script src="js/carousel.js"> </script>
+    <script src="js/projects.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/comment.js"></script>
 
 
 </main>

@@ -237,32 +237,17 @@ header {
 /*------------------------------------------------------------------*
 /*Containers*/
 main {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 5rem;
     /* max-width: 1780px; */
     margin-left: auto;
     margin-right: auto;
     padding: 0.75rem;  
     min-width: 375px;
-=======
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.75rem;
-  box-sizing: border-box;
-  font-family: "Silkscreen", sans-serif; 
-  min-width: 375px;
->>>>>>> 9f74a67506193f0430ef799e969d269aea72d454
 }
 
 .container {
@@ -343,10 +328,7 @@ footer {
   color: var(--mauve-pink);
 }
 
-
 /*------------------------------------------------------------------*/
-/*------------------------------------------------------------------*/
-
 /*Forms*/
 
 button,legend,select,option,table
@@ -360,6 +342,56 @@ button,legend,select,option,table
     cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
     width: 100%;
+}
+
+.tabs-window {
+  width: 80%;
+  background: var(--cream);
+  border: 4px inset var(--light-mauve);
+  /* box-shadow: 3px 3px #824255, 0 0 0 3px var(--light-mauve); */
+  margin: 2rem auto;
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+.tab-bar {
+  display: flex;
+  background: var(--cream);
+}
+
+.tab-button {
+  padding: 0.25rem 1rem;
+  border-top: 2px solid var(--white);
+  border-bottom: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.tab-button.active {
+  background: var(--cream);
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--dialog-gray);
+  font-size: 18px;
+  border-bottom: none;
+  font-weight: bold;
+  box-shadow: none !important;
+  outline: none;
+  color: var(--mauve-pink);
+}
+
+.tab-content {
+  padding: 1rem;
+  background: var(--cream);
+  /* border: 2px solid var(--mauve-pink); */
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
 }
 
 form{
@@ -384,14 +416,6 @@ form{
   border: 3px inset var(--light-mauve);
   box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
   font-family: "Silkscreen", sans-serif;
-<<<<<<< HEAD
-  border: 3px inset var(--light-mauve);
-  box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
-  font-family: "Silkscreen", sans-serif;
-=======
->>>>>>> 9f74a67506193f0430ef799e969d269aea72d454
-  /*padding: 1rem;*/
-
 }
 .input{
   border: 2px solid var(--light-mauve);
@@ -582,6 +606,8 @@ input[type="reset"]:disabled,
   margin-right: 4px;
   width: fit-content;
   background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
 }
 .close-spotify {
   color: var(--sage-green);
@@ -627,7 +653,7 @@ input[type="reset"]:disabled,
   margin: 0.5rem;
 }
 
-.window-body button {
+.window-body button, .tabs-window button {
   padding: 10px;
   display: flex;
   margin: 0.5rem;
@@ -664,8 +690,8 @@ input[type="reset"]:disabled,
 .title-bar {
   background: linear-gradient(
     90deg,
-    var(--light-pink),
-    var(--pale-pink)
+    var(--light-mauve),
+    var(--light-pink)
   );
   margin: 0;
   padding: 6px 0;
@@ -705,7 +731,7 @@ input[type="reset"]:disabled,
   letter-spacing: 0;
   margin-right: 24px;
   padding-left: 4px;
-  font-size: 24px;
+  font-size: clamp(18px, 8vh, 22px);
   
 }
 .title-bar-spotify-text {
@@ -714,7 +740,7 @@ input[type="reset"]:disabled,
   letter-spacing: 0;
   margin-right: 24px;
   padding-left: 4px;  
-  font-size: 24px;
+  font-size: clamp(18px, 8vh, 22px);
 
 }
 
@@ -915,19 +941,17 @@ a:hover {
       width: 100%;
       height: 100px;
     }
-
 }
 @media (max-width: 660px) {
   .header-nav {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    
     gap: 7px;
   }
 
   .header-nav .button a button{
-    width: 40%;
+    width: 100%;
     text-align: center;
     justify-content: center;
     min-width: 124px
@@ -938,10 +962,14 @@ a:hover {
   }
   
   img.cloud{
-      float: center;
-      width: 100%;
-      height: 75px;
-    }
+    float: center;
+    width: 100%;
+    height: 75px;
+  }
+
+  .container{
+    margin-top: 7rem;
+  }
 
 }
 /*------------------------------------------------------------------*/
