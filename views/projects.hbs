@@ -8,32 +8,31 @@
 <div id="right-column">
   <div class="tabs-window">
     <div class="tab-bar">
-      <button class="tab-button" data-tab="tab1">Graphic Design</button>
+      <button class="tab-button active" data-tab="tab1">Graphic Design</button>
       <button class="tab-button" data-tab="tab2">Web Dev</button>
       <button class="tab-button" data-tab="tab3">projects</button>
     </div>
     <div class="tab-content">
-      <div class="tab-pane active" id="tab1">
-        <div class="gallery-container">
-          <div id="pdf-details">
-            <h2 id="pdf-title" style="font-size:24px">Title Here</h2>
-          </div>
-          <div style="border: 3px inset #fff;">
-            <img id="pdf-viewer" src="" alt="Gallery Image" style="max-width: 100%; height: auto;" />      
-            <div id="pdf-details">
-              <p id="pdf-description" style="font-size:16px">Description here.</p>
-            </div>
-          </div>
-          <div id="navigation" style="display: flex; justify-content:center;" >
-            <button id="prev-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/prev-btn.png"  style="max-width: 5vw"></button>
-            <button id="next-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/next-btn.png"  style="max-width: 5vw"></button>
-          </div> 
+      <div class="tab-pane active" id="graphic-design" data-tab="graphic-design"> 
+        <div id="gallery" class="gallery-container">
+          <h4 id="title-graphic"></h4>
+          <img id="viewer-graphic" />
+          <p id="desc-graphic"></p>
+          <button id="prev-graphic"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
+          <button id="next-graphic"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
         </div>
       </div>
-      <div class="tab-pane" id="tab2">
-        <p>web dev sc coming</p>
+
+      <div class="tab-pane" id="web-dev" data-tab="web-dev">
+        <div id="gallery" class="gallery-container">
+          <h4 id="title-web"></h4>
+          <img id="viewer-web" class="pdf-viewer" />
+          <p id="desc-web"></p>
+          <button id="prev-web"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
+          <button id="next-web"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
+        </div>
       </div>
-      <div class="tab-pane" id="tab3">
+      <div class="tab-pane">
         <p>💻✨</p>
       </div>
     </div>
@@ -75,6 +74,21 @@
     margin: 0 auto;
     padding: 10px;
     max-inline-size: 75%;
+  }
+
+  .tab-view{
+    border: 3px inset #fff;
+  }
+
+  img.pdf-viewer{
+    max-inline-size: 100%; 
+    block-size: auto
+  }
+
+  #prev-graphic, #next-graphic,
+  #prev-web, #next-web, {
+    inline-size:fit-content; 
+    justify-items: center;
   }
 
     @media (max-inline-size: 840px) {

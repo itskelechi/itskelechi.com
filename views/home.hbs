@@ -30,7 +30,7 @@
     <!--spotify-->
     <div class="window-spotify playlist">
       <div class="title-bar-spotify" >
-        <div class="title-bar-text" style="font-size: medium;">Now Playing...</div>
+        <div class="title-bar-spotify-text" style="font-size: medium;">Now Playing...</div>
         <div class="title-bar-ctrl">
             <button class="close-spotify" id="mini">&#95;</button>
             <button class="close-spotify" id="XCls">&#10006;</button>
@@ -103,7 +103,7 @@
   <!--photo-->
   <div class="window photo-window">
     <div class="title-bar-spotify" style="gap: 3rem;">
-      <div class="title-bar-text"></div>
+      <div class="title-bar-spotify-text"></div>
       <div class="title-bar-ctrl">
           <button class="close-spotify" id="mini">&#95;</button>
           <button class="close-spotify" id="XCls">&#10006;</button>
@@ -164,20 +164,22 @@
     font-size: larger;
   }
   .signature{
-    float: right; 
-    padding-bottom: 1rem;
+    float: inline-end; 
+    padding-block-end: 1rem;
   }
   .photo-window{
-    margin: 0.5rem; width: 75%; height: auto;
+    margin: 0.5rem; inline-size: 75%; block-size: auto;
   }
   .playlist{
-    margin: 0.5rem 0; width: 100%; height: auto;
+    margin: 0.5rem 0; 
+    inline-size: 100%; 
+    block-size: auto;
   }
   img.sign{
     display: inline-flex; 
     align-content: right; 
-    max-width: 200px; 
-    height: auto;
+    max-inline-size: 200px; 
+    block-size: auto;
   }
    
   #left-column, #center-column, #right-column {
