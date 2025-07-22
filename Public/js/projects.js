@@ -1,7 +1,13 @@
 document.querySelectorAll('.tab-button').forEach(button => {
   button.addEventListener('click', () => {
     const targetTab = button.getAttribute('data-tab');
-    const gallery = document.getElementById('gallery')
+    let prefix 
+
+    if (targetTab === 'graphic-design'){
+      prefix = 'graphic'
+    } else if (targetTab === 'web-dev'){
+      prefix = 'web'
+    }
 
     // Toggle active button
     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
@@ -11,23 +17,59 @@ document.querySelectorAll('.tab-button').forEach(button => {
     document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
     document.getElementById(targetTab).classList.add('active');
 
-    fetch(`/projects/gallery?folder=${targetTab}`).then(res => res.json()).then(images => {
-      gallery.innerHTML = '';
-      images.forEach(img => {
-        const pdf = document.createElement('div');
-        pdf.className = 'tab-view';
-        pdf.innerHTML = `
-        <img src="${img.file}" alt="${img.title}" class="pdf-viewer" />
-        <h4>${img.title}</h4>
-        <p>${img.description}</p>
-        `;
-        gallery.appendChild(pdf);
-      });
-
-    })
-    .catch(err => {
-      console.error(err);
-      gallery.innerHTML = `<p> Failed to load gallery </p>`
-    });
+    createGallery(targetTab, prefix)
+    
   });
 });
+
+
+function createGallery(folderName, prefix) {
+  let galleryData = [];
+  let currentIndex = 0;
+
+  const title = document.getElementById(`title-${prefix}`);
+  const viewer = document.getElementById(`viewer-${prefix}`);
+  const desc = document.getElementById(`desc-${prefix}`);
+  const prevBtn = document.getElementById(`prev-${prefix}`);
+  const nextBtn = document.getElementById(`next-${prefix}`);
+
+  function updateViewer(index) {
+    const item = galleryData[index];
+    viewer.src = item.file;
+    title.textContent = item.title;
+    desc.textContent = item.description;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === galleryData.length - 1;
+  }
+
+  fetch(`/projects/gallery?folder=${folderName}`)
+    .then(res => res.json())
+    .then(data => {
+      galleryData = data;
+      if (galleryData.length > 0) {
+        updateViewer(currentIndex);
+      } else {
+        title.textContent = "No items!";
+      }
+    });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateViewer(currentIndex);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < galleryData.length - 1) {
+      currentIndex++;
+      updateViewer(currentIndex);
+    }
+  });
+}
+
+// Load both galleries on window load
+window.onload = function () {
+  createGallery('graphic-design', 'graphic');
+  createGallery('web-dev', 'web');
+};

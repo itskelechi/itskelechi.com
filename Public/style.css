@@ -803,7 +803,7 @@ input[type="reset"]:disabled,
 .gallery-container {
   max-inline-size: 100%; 
   margin: 0 auto;
-  /*overflow-x: auto; */
+  overflow-x: auto;
   padding: 10px;
 }
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const { engine } = require('express-handlebars');
 
@@ -15,7 +15,8 @@ app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
 app.use(express.json());
-app.use('/', require('./routes/apiGallery'));
+app.use('/projects/gallery', require('./routes/apiGallery'));
+
 
 
 // Routes

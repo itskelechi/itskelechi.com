@@ -17,7 +17,7 @@ function createGallery(folderName, prefix) {
     nextBtn.disabled = index === galleryData.length - 1;
   }
 
-  fetch(`/api/gallery?folder=${folderName}`)
+  fetch(`/projects/gallery?folder=${folderName}`)
     .then(res => res.json())
     .then(data => {
       galleryData = data;

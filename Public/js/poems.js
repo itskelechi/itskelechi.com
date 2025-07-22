@@ -1,5 +1,5 @@
 const messages = [
-  `Big Brother is are watching.`,
+  `Big Brother is watching.`,
   `Unexpected Error. Please Investigate.`,
 
   `you smell like old spice.\n
@@ -110,7 +110,7 @@ window.onload = function () {
             </div>
         </div>
         <div class="window-body" style="font-size:12px">
-            <p>${message}</p>
+            <p>${formattedMessage}</p>
             <span class="hired">Am I hired or what?</span>
         </div>
         `;
