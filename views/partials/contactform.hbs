@@ -4,7 +4,7 @@
       <div class="title-bar-text" style="font-size: 18px">Leave a Message.</div>
       <div class="title-bar-ctrl">
         <button class="close" id="mini" disabled>&#95;</button>
-        <button class="close" id="XCls" disabled>&#10006;</button>
+        <button class="close" id="XCls" >&#10006;</button>
       </div>
     </div>
     <div class="window-body">
@@ -27,7 +27,8 @@
         <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html"> -->
 
         <button type="submit" id="contact-submit">Send Message</button>
-        <p id="contact-form-status" class="confirm"></p>
+        <div id="contact-form-status" class="confirm">
+        </div>
       </form>
 
     </div>
@@ -38,8 +39,10 @@
     font-size: small;
     color: var(--required-red);
   }
-  .confirm{
-    font-size: smaller;
+  .confirm p{
+    font-size: 12px;
+    text-align: center;
+    margin: ;
   }
 </style>
 <script src="./js/contactForm.js"></script>

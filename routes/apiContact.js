@@ -26,6 +26,7 @@ router.post('/send-message', async(req, res) => {
             to: 'kelechiariwodo@gmail.com',
             subject: `Website Outreach from ${name} - ${subject}`,
             html: `
+                <p><b>FROM: </b>${email}</p>
                 <p><b>Message: </b></p>
                 <p>${message}</p>
             `,

@@ -24,14 +24,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
             const result = await res.json();
             if(res.ok){
-                reply.innerText= `💌 Message delivered, ${data.name}! 💌 ~xoxo K.`;
-                // form.reset();
+                reply.innerHTML= `<p>💌Message delivered💌,</p> <p>${data.name}!</p>  </p><p> ~ xoxo K.</p>`;
             } else {
-                reply.innerText = "There is a problem with our pigeon courier: " + result.error;
+                reply.innerHTML = `<p>There is a problem with our pigeon courier: </p> <p> ${result.error} </p`;
             }
         } catch (e){
             reply.innerText= "Uh Oh. Bad gateways and crowded internet highways afoot. Please try again later.";
             console.error(e)
         }        
     });
+
+    document.getElementById('XCls').onclick = () => {
+        document.getElementById('contact-form').reset();
+    };
+
 });

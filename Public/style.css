@@ -408,7 +408,7 @@ form{
   inline-size: 100%;
   gap: 0.25rem;
   align-items: center;
-  padding: 1rem;
+  padding: 0.65rem;
 }
 
 .input, textarea, input{
