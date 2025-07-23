@@ -9,7 +9,7 @@ var date = dateTime[0];
 var time = formatTime(lastUpdated);
 
 var element = document.getElementById("last");
-element.innerHTML = "<smaller>Last Updated: <p style= display; block>"+ time + "</p> </smaller><p style= display; block>"+ date;
+element.innerHTML = "<smaller>Last Updated: <p>"+ time + "</p> </smaller><p>"+ date;
 
 function formatTime(d) {
     const date = new Date (d);

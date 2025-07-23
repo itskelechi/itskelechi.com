@@ -625,6 +625,8 @@ input[type="reset"]:disabled,
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   inline-size: 100%;
+  min-height: 150px;
+  height: fit-content;
   box-shadow: 3px 3px var(--light-mauve) , 0 0 0 3px var(--cream);
   border-style: outset;
 }
@@ -907,6 +909,7 @@ a:hover {
   /* box-shadow: inset 3px 3px 0px var(--light-mauve), inset -3px -3px 0px var(--light-pink); */
   margin-inline-start: auto;
     font-size: smaller;
+    text-align: right;
 }
 
 #last p{

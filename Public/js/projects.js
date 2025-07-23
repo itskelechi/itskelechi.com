@@ -1,12 +1,11 @@
 document.querySelectorAll('.tab-button').forEach(button => {
   button.addEventListener('click', () => {
     const targetTab = button.getAttribute('data-tab');
-    let prefix 
+    let prefix;
 
-    if (targetTab === 'graphic-design'){
-      prefix = 'graphic'
-    } else if (targetTab === 'web-dev'){
-      prefix = 'web'
+    if (targetTab === 'graphic-design' || targetTab === 'web-dev'){
+      prefix = targetTab === 'graphic-design'? 'graphic' : 'web'
+      createGallery(targetTab, prefix);
     }
 
     // Toggle active button
@@ -16,8 +15,6 @@ document.querySelectorAll('.tab-button').forEach(button => {
     // Toggle active content pane
     document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
     document.getElementById(targetTab).classList.add('active');
-
-    createGallery(targetTab, prefix)
     
   });
 });
