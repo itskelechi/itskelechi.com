@@ -1,11 +1,12 @@
 document.querySelectorAll('.tab-button').forEach(button => {
   button.addEventListener('click', () => {
     const targetTab = button.getAttribute('data-tab');
-    let prefix;
+    let prefix 
 
-    if (targetTab === 'graphic-design' || targetTab === 'web-dev'){
-      prefix = targetTab === 'graphic-design'? 'graphic' : 'web'
-      createGallery(targetTab, prefix);
+    if (targetTab === 'graphic-design'){
+      prefix = 'graphic'
+    } else if (targetTab === 'web-dev'){
+      prefix = 'web'
     }
 
     // Toggle active button
@@ -15,6 +16,8 @@ document.querySelectorAll('.tab-button').forEach(button => {
     // Toggle active content pane
     document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
     document.getElementById(targetTab).classList.add('active');
+
+    createGallery(targetTab, prefix)
     
   });
 });
@@ -35,8 +38,6 @@ function createGallery(folderName, prefix) {
     viewer.src = item.file;
     title.textContent = item.title;
     desc.textContent = item.description;
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === galleryData.length - 1;
   }
 
   fetch(`/projects/gallery?folder=${folderName}`)
@@ -51,17 +52,15 @@ function createGallery(folderName, prefix) {
     });
 
   prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateViewer(currentIndex);
-    }
+    if (galleryData.length === 0) return;
+    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+    updateViewer(currentIndex);
   });
 
   nextBtn.addEventListener("click", () => {
-    if (currentIndex < galleryData.length - 1) {
-      currentIndex++;
-      updateViewer(currentIndex);
-    }
+    if (galleryData.length === 0) return;
+    currentIndex = (currentIndex + 1) % galleryData.length;
+    updateViewer(currentIndex);
   });
 }
 
