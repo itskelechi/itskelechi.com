@@ -33,6 +33,9 @@
   --light-pink: #e8b7ca; /*dialog pink dark */
   --pale-pink: #eddde3; /*dialog pink light */
   --hunter-green: #0b553c; /*table headers, selected texts*/
+  --purple: #594b70;
+  --lilac: #c3aed0;
+  --lavendar: #8d77b1;
   cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
 }
 
@@ -620,8 +623,8 @@ input[type="reset"]:disabled,
   font-family: "Silkscreen", sans-serif;
   padding: 1rem;
   border: 3px outset var(--white); 
-  background-color: var(--button-shadow-light);
-  color: var(--light-mauve);
+  background-color: var(--disabled-pink);
+  color: var(--mauve-pink);
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   inline-size: 100%;
@@ -877,7 +880,7 @@ color: var(--mauve-pink);
 }
 
 a:visited {
-  color: var(--sky-blue);
+  color: var(--grey-blue);
 }
 
 a:hover {
