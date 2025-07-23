@@ -13,8 +13,12 @@
   
     <!--photo-->
     <div class="window photo-window">
-      <div class="title-bar-spotify" style="gap: 3rem;">
-          <div class="title-bar-text"><br></div>
+      <div class="title-bar-spotify" >
+          <div class="title-bar-text"></div>
+          <div class="title-bar-ctrl">
+              <button class="close-spotify" id="mini">&#95;</button>
+              <button class="close-spotify" id="XCls">&#10006;</button>
+          </div>
       </div>
       <div class="window-body">
         <p>
@@ -26,7 +30,11 @@
     <!--spotify-->
     <div class="window-spotify playlist">
       <div class="title-bar-spotify" >
-        <div class="title-bar-text" style="font-size: medium;">Now Playing...</div>
+        <div class="title-bar-spotify-text" style="font-size: medium;">Now Playing...</div>
+        <div class="title-bar-ctrl">
+            <button class="close-spotify" id="mini">&#95;</button>
+            <button class="close-spotify" id="XCls">&#10006;</button>
+        </div>
       </div>            
       <div class="window-body" >
         <iframe style="border-radius:0px" src="https://open.spotify.com/embed/playlist/4WNH0tEgzMePmyjDe2Okym?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay;" loading="lazy"></iframe>
@@ -39,22 +47,27 @@
   <!--center col-->
   <div id="center-column">
     
-    <div class="window" style="margin: 3.5rem 0.5rem; width: 80%; height: auto;">
+    <div class="window" style="margin: 3.5rem 0.5rem; inline-size: 80%; block-size: auto;">
       <div class="title-bar" >
           <div class="title-bar-text">Welcome to My Pink Paradise!</div>
+          <div class="title-bar-ctrl">
+              <button class="close" id="mini">&#95;</button>
+              <button class="close" id="XCls">&#10006;</button>
+          </div>
       </div>
       <div class="window-body">
         <section class="pixelify-sans-pixelify">
           <p style="font-size: 32px;"><em>Hi! I’m Kelechi!</em></p>
 
           <p>
-            If there’s one thing you should know about me, it’s that I'm obsessed with bold vibes, creative chaos, and (yes!) all things pink. Seriously—if it’s not pink, make it pink. Immediately.  
+            I'm a multidisciplinary IT professional with a creative background in film and theatre, now forging a path at the intersection of web development, cybersecurity, and systems engineering and if there’s one thing you should know about me, it’s that I'm obsessed with bold vibes, creative chaos, and secure, considerate design 
             <br>
-            (Except in my fashion life, where things tend to drift more... <em class="gothic">gothic.</em> ~ Yeah, that’s a plot twist. )
+            (with maybe a bias for all things pink....  
+            - Except in my fashion life, where things tend to lean a bit more... <em class="gothic">gothic.</em>)
           </p>
 
           <p>
-            This little corner of the web is where tech meets style—where femininity isn’t just embraced, it’s throwing a party with glitter and confetti cannons. I code cool things by day and conjure design magic by night (with an explosion of visual texture, obviously).
+            This little corner of the web is where tech meets style—where femininity isn’t just the appreciated—it’s put center stage and stars in all the productions. I’m all about reinventing digital experiences things by day and . 
           </p>
 
           <p>
@@ -90,7 +103,11 @@
   <!--photo-->
   <div class="window photo-window">
     <div class="title-bar-spotify" style="gap: 3rem;">
-      <div class="title-bar-text"><br></div>
+      <div class="title-bar-spotify-text"></div>
+      <div class="title-bar-ctrl">
+          <button class="close-spotify" id="mini">&#95;</button>
+          <button class="close-spotify" id="XCls">&#10006;</button>
+      </div>
     </div>
     <div class="window-body">
       <img src = "./SiteImages/gallery/pond.jpg" class="windowIcon">
@@ -132,47 +149,132 @@
 </div>
   <!--right-col end-->
 
+  {{> gallery}}
 </div>
-<!--container end-->
-
-</main>
-
-
-{{> gallery}}
-
-
-<!--container end-->
-
-<script src="./js/download.js"> </script>
-<script src="./js/dropdown.js"></script>
-<script src="./js/script.js"></script>
-<script src="./js/search.js"></script>
-
+    <!--container end-->
 <style>
-.window-body p{
-  margin: 0 7px;
-  padding: 7px 0;
-  font-size: 16px;
-}
-.gothic{
-  color: var(--black);
-  font-weight: 600;
-  font-size: larger;
-}
-.signature{
-  float: right; 
-  padding-bottom: 1rem;
-}
-.photo-window{
-  margin: 0.5rem; width: 75%; height: auto;
-}
-.playlist{
-  margin: 0.5rem 0; width: 100%; height: auto;
-}
-img.sign{
-  display: inline-flex; 
-  align-content: right; 
-  max-width: 200px; 
-  height: auto;
-}
+  .window-body p{
+    margin: 0 7px;
+    padding: 7px 0;
+    font-size: 16px;
+  }
+  .gothic{
+    color: var(--black);
+    font-weight: 600;
+    font-size: larger;
+  }
+  .signature{
+    float: inline-end; 
+    padding-block-end: 1rem;
+  }
+  .photo-window{
+    margin: 0.5rem; inline-size: 75%; block-size: auto;
+  }
+  .playlist{
+    margin: 0.5rem 0; 
+    inline-size: 100%; 
+    block-size: auto;
+  }
+  img.sign{
+    display: inline-flex; 
+    align-content: right; 
+    max-inline-size: 200px; 
+    block-size: auto;
+  }
+   
+  #left-column, #center-column, #right-column {
+    display: flex;
+    margin: 0.25rem;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+  }    
+
+  #left-column, #right-column {
+    flex: 1;
+    max-inline-size: 20%;
+    gap: 0.125rem;
+    min-inline-size: 10rem;
+  }
+
+  #right-column {
+    inset-inline-end:0;
+  }
+
+  #center-column {
+    background-image: url('SiteImages/gallery/spa.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    flex: 2;
+    margin: 0 auto;
+    max-inline-size: 60%;
+  }
+
+  #left-column {
+    inset-inline-start:0;
+  }
+
+  input{
+    padding: 5px 10px;
+    border: 4px inset #c38da2;
+    border-style: outset;
+    color: #422c42;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px #eeded2;
+  }
+
+  img.windowIcon{
+    float: center;
+    block-size: 350px;
+    inline-size: 100%;
+  }
+
+  iframe {
+    max-inline-size: 100%;
+  }
+
+  @media (max-inline-size: 840px) {
+    #left-column, #right-column, #center-column {
+      flex-basis: 100%; 
+      max-inline-size: 100%; 
+      block-size: auto;
+    
+    }
+    #right-column{
+      margin-block-end: 140px: 
+    }
+  }
+
+  ul li button {
+    inline-size: 100%;
+    padding: 0.5rem; 
+    margin-block-start: 0.5rem; 
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-size: 20px;
+    color: #a55280;
+  }
+  .sm-icon {
+    inline-size: 25px;
+    block-size: 25px;
+  }
+  br{
+    padding:0 0 0.25rem 0;
+    margin: 0.625rem auto;
+  }
+
+
 </style>
+    
+    <script src="./js/download.js"> </script>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/search.js"></script>

@@ -1,43 +1,253 @@
 <div class="container">
     
         <!--comment section-->
-    <div id="left-column">
-      </div>
-    
-    
-     <!--poster designs-->
-    <div>
-      <div class="window" style="margin: 0.5rem; width:100%; height:auto;">
-      <div class="title-bar">
-        <div class="title-bar-text" style="font-size: 24px">Graphic Design is my passion</div>
-      </div>
-      <div class="window-body" style="justify-content: center; text-align: center; padding: 0.75rem;">
+<div id="left-column">
+  {{>contactform}}
+</div>
 
-          <div class="gallery-container">
-            <div id="pdf-details">
-              <h2 id="pdf-title" style="font-size:24px">Title Here</h2>
-              <!--<p id="pdf-description">Description here.</p>-->
-            </div>
-            <div style=" border: inset">
-              <img id="pdf-viewer" src="" alt="Gallery Image" style="max-width: 100%; height: auto;" />      
-      
-              <div id="pdf-details">
-                <p id="pdf-description" style="font-size:16px">Description here.</p>
-              </div>
-            </div>
-    
-            <div id="navigation" style="display: flex; justify-content:center" >
-              <button id="prev-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/prev-btn.png"  style="max-width: 6vw"></button>
-              <button id="next-btn" style="width:fit-content; justify-items: center;"><img src="./SiteImages/buttons/next-btn.png"  style="max-width: 6vw"></button>
-            </div> 
+<div id="right-column">
+  <div class="tabs-window">
+    <div class="tab-bar">
+      <button class="tab-button active" data-tab="graphic-design">Graphic Design</button>
+      <button class="tab-button" data-tab="web-dev">Web Dev</button>
+      <button class="tab-button" data-tab="projects">projects</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active" id="graphic-design" data-tab="graphic-design"> 
+        <div id="gallery-graphic-design" class="gallery-container">
+          <h4 id="title-graphic"></h4>
+          <img id="viewer-graphic" class="tab-view" />
+          <p id="desc-graphic" class="description"></p>
+          <div class="navigation">
+            <button id="prev-graphic"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
+            <button id="next-graphic"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
           </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="web-dev" data-tab="web-dev">
+        <div id="gallery-web-dev" class="gallery-container">
+          <h4 id="title-web"></h4>
+          <img id="viewer-web" class="tab-view" />
+          <p id="desc-web" class="description"></p>
+          <div class="navigation">
+            <button id="prev-web"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
+            <button id="next-web"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="projects" data-tab="projects">
+        {{!-- The African Collective --}}
+        <div class="card" style="background-color: #c6afb9;"> 
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/TAC-project-logo.png" class="project-logo"/>
+          </div>
+          
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Blending Reality --}}
+        <div class="card" style="background-color: #cbb0dc ;">
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/BR-project-logo.png" class="project-logo"/>
+          </div>
+          
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Rock Paper Scissors Bot --}}
+        <div class="card" style="background-color: #e6bed4 ;">
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/RPS-project-logo.png" class="project-logo"/>
+          </div>
+          
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Circle Dodge --}}
+        <div class="card" style="background-color: #a0c8d4 ;">
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/CD-project-logo.png" class="project-logo"/>
+          </div>
+          
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- GGC Parking Redesign --}}
+        <div class="card" style="background-color: #bbd6be;">
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/ggc-parking-project-logo.png" class="project-logo"/>
+          </div>          
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Cloud 8 --}}
+        <div class="card" style="background-color: #c6afb9;">
+          <div class="logo-box">
+            <img src="/SiteImages/portfolio/projects/C8-project-logo.png" class="project-logo"/>
+          </div>
+          <div class="project-details">
+            <p><b>Title: </b></p>
+            <p><b>About: </b></p>
+            <p><b><a href="http://">Read More...</a> </b></p>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-    <script src=".js/carousel.js"> </script>
-    <script src=".js/dropdown.js"></script>
-    <script src=".js/script.js"></script>
-    <script src=".js/comment.js"></script>
+  </div>
+</div>
+<style>
+  #left-column, #right-column {
+    display: flex;
+    margin: 0.25rem;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+  }    
 
+  #left-column {
+    background-image: url('SiteImages/gallery/pond.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    flex: 1;
+    inset-inline-start: 0;
+    max-inline-size: 25%;
+    gap: 0.125rem;
+    min-inline-size: 10rem;
+    inset-inline-start:0;
+    margin: 0.5rem auto;
+    padding: 10px;
+  }
+  
+  #right-column {
+    background-image: url('SiteImages/gallery/tub.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    inset-inline-end: 0;
+    flex: 2;
+    margin: 0 auto;
+    padding: 10px;
+    max-inline-size: 75%;
+  }
+
+  .tab-view{
+    border: 4px inset var(--light-mauve);
+    inline-size: 100%;
+  }
+
+  img.pdf-viewer{
+    max-inline-size: 100%; 
+    block-size: auto
+  }
+  img.project-logo{
+    float: left;
+    max-width: 125px;
+    border: 4px inset var(--light-mauve);
+    justify-content: center;
+    align-items: center;
+  }
+ /* Card layout */
+.card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px; 
+  height: 150px;
+}
+
+.project-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 4px inset var(--light-mauve);
+}
+
+.project-details {
+  margin-left: -20px;
+padding-left: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto;
+}
+.description{
+  font-size: clamp(18px, 8vh, 12px);
+  text-align: right;
+}
+.project-details p{
+  font-size: clamp(14px, 8vh, 8px);
+  word-wrap: break-word;
+
+}
+  .gallery-container div button {
+    inline-size:fit-content; 
+    display: inline-flex;
+    justify-items: center;
+    align-content: center;
+  }
+
+    @media (max-inline-size: 840px) {
+    #left-column, #right-column {
+        flex-basis: 100%; 
+        max-inline-size: 100%; 
+        block-size: auto;
+    
+    }
+    #right-column{
+        margin-block-end: 140px: 
+    }
+     .card {
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+  
+    .logo-box {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.25rem;
+    }
+  }
+</style>
+    <script src="js/projects.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/comment.js"></script>
 
 </main>

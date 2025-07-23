@@ -1,0 +1,53 @@
+<div class="container">
+
+  <div class="window" style="inline-size: 65%; block-size: auto;">
+    <div class="title-bar" style="">
+      <div class="title-bar-text" style="font-size: 12px"> Mission failed Successfully </div>
+      <div class="title-bar-ctrl">
+        <button class="close">&#95;</button>
+        <button class="close">&#10006;</button>
+      </div>
+
+    </div>            
+    <div class="window-body" style="padding: 1rem;">
+      <h3 style ="text-align: center; font-style: italic; font-size: 10px">Are you ready to enter
+      </h3>
+      <br>
+      <button>Yes</button>
+      <button>Maybe</button>
+      <button>I don't know</button>
+    </div>
+  </div>
+  
+  <p>Aren't you glad I didn't make these open new windows.</p>
+</div>
+<style>
+    .popup {
+      position: absolute;
+      border: 4px inset var(--white);
+      background: var(--cream);
+      box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
+      z-index: 999;
+      max-width: 90vw;
+      word-wrap: break-word;
+      animation: popin 0.4s ease;
+    }
+    .title-bar-text{
+        font-size: medium;
+    }
+
+    .window-body p {
+      padding: 4px;
+      font-size: small;
+    }
+
+    .hired{
+      color: var(--cream);
+    }
+
+    @keyframes popin {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+</style>    
+<script src="/js/poems.js"></script>

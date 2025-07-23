@@ -7,101 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     
-    <style>
-   
-        #left-column, #center-column, #right-column {
-            display: flex;
-            margin: 0.25rem;
-            align-items: center;
-            flex-direction: column;
-            position:relative;
-            margin-right: auto;
-            margin-left: auto;
-        }    
-    
-        #left-column, #right-column {
-            flex: 1;
-            max-width: 20%;
-            gap: 0.125rem;
-            min-width: 10rem;
-        }
-        
-        #right-column {
-            right:0;
-        }
-        
-        #center-column {
-            background-image: url('SiteImages/gallery/spa.jpg');
-            background-size: cover;
-            background-position: center; 
-            background-repeat: no-repeat;
-            flex: 2;
-            margin: 0 auto;
-            max-width: 60%;
-        }
-        
-        #left-column {
-            left:0;
-        }
-        
-        
-        input{
-            /*font-family: "Pixelify Sans", sans-serif;*/
-            padding: 5px 10px;
-            border: 4px inset #c38da2;
-            border-style: outset;
-            /*background-color: #eeded2;*/
-            color: #422c42;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 0 0 3px #eeded2;
-        }
-        
-        img.windowIcon{
-            float: center;
-            height: 350px;
-            width: 100%
-        }
-    
-        iframe {
-            max-width: 100%;
-        }
 
-
-        @media (max-width: 840px) {
-            #left-column, #right-column, #center-column {
-                flex-basis: 100%; 
-                max-width: 100%; 
-                height: auto;
-            
-            }
-            #right-column{
-                margin-bottom: 140px: 
-            }
-        }
-
-        ul li button {
-            width: 100%;
-            padding: 0.5rem; 
-            margin-top: 0.5rem; 
-            text-align: center;
-            justify-content: center;
-            box-sizing: border-box;
-        }
-        
-        p {
-            font-size: 20px;
-            color: #a55280;
-        }
-        .sm-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-    </style>
-    
     
 <script src="Scripts/search.js"></script>
 
@@ -112,39 +21,33 @@
     <header>
       <div class = "header-nav">
       
-      <div class="button" style="justify-content; center;">
-        <a href="/home">
-          <button type="submit"> HOME </button> 
-        </a>
-      </div>
+        <div class="button" style="justify-content; center;">
+          <a href="/home">
+            <button type="submit"> HOME </button> 
+          </a>
+        </div>
 
-      <div class="button" style="justify-content; center;">
-        <a href="/about">
-          <button type="submit"> ABOUT </button> 
-        </a>
-      </div>
-      
-      <div class="button" style="justify-content; center;">
-        <a href="/schedule">
-          <button type="submit"> SCHEDULE </button> 
-        </a>
-      </div>
+        <div class="button" style="justify-content; center;">
+          <a href="/about">
+            <button type="submit"> ABOUT </button> 
+          </a>
+        </div>
         
-      <div class="button" style="justify-content; center;">
-        <a href="/projects">
-          <button type="submit"> PROJECTS </button> 
-        </a>
-      </div>
         
-      <div class="button" style="justify-content; center;">
-        <a href="/blog">
-          <button type="submit"> BLOGS </button> 
-        </a>
-      </div>      
+        <div class="button" style="justify-content; center;">
+          <a href="/projects">
+            <button type="submit"> PROJECTS </button> 
+          </a>
+        </div>
+          
+        <div class="button" style="justify-content; center;">
+          <a href="/blog">
+            <button type="submit"> BLOGS </button> 
+          </a>
+        </div>      
         
       </div>
     </header>
     <img src = "SiteImages/layout/cloud.png" class="cloud">
-
   
       <main>

@@ -1,18 +1,40 @@
+document.querySelectorAll('.tab-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetTab = button.getAttribute('data-tab');
+    let prefix;
+
+    if (targetTab === 'graphic-design' || targetTab === 'web-dev'){
+      prefix = targetTab === 'graphic-design'? 'graphic' : 'web'
+      createGallery(targetTab, prefix);
+    }
+
+    // Toggle active button
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Toggle active content pane
+    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+    document.getElementById(targetTab).classList.add('active');
+    
+  });
+});
+
+
 function createGallery(folderName, prefix) {
   let galleryData = [];
   let currentIndex = 0;
 
-  const titleEl = document.getElementById(`title-${prefix}`);
-  const viewerEl = document.getElementById(`viewer-${prefix}`);
-  const descEl = document.getElementById(`desc-${prefix}`);
+  const title = document.getElementById(`title-${prefix}`);
+  const viewer = document.getElementById(`viewer-${prefix}`);
+  const desc = document.getElementById(`desc-${prefix}`);
   const prevBtn = document.getElementById(`prev-${prefix}`);
   const nextBtn = document.getElementById(`next-${prefix}`);
 
   function updateViewer(index) {
     const item = galleryData[index];
-    viewerEl.src = item.file;
-    titleEl.textContent = item.title;
-    descEl.textContent = item.description;
+    viewer.src = item.file;
+    title.textContent = item.title;
+    desc.textContent = item.description;
     prevBtn.disabled = index === 0;
     nextBtn.disabled = index === galleryData.length - 1;
   }
@@ -24,7 +46,7 @@ function createGallery(folderName, prefix) {
       if (galleryData.length > 0) {
         updateViewer(currentIndex);
       } else {
-        titleEl.textContent = "No items!";
+        title.textContent = "No items!";
       }
     });
 

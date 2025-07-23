@@ -35,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/itskelechi/itskelechi.com/issues"
   },
-  "homepage": "https://github.com/itskelechi/itskelechi.com#readme"
+  "homepage": "https://github.com/itskelechi/itskelechi.com#readme",
+  "type": "commonjs"
 }
