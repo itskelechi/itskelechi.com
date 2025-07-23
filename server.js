@@ -15,12 +15,13 @@ app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/projects/contact', require('./routes/apiContact')); 
 app.use('/projects/gallery', require('./routes/apiGallery'));
-
-
 
 // Routes
 app.get('/', (req, res) => {
+  console.log("Landing Page");
   res.render('main', {
     PageTitle: 'We\'ve been waiting for you',
     metaDesc: 'Welcome to Kelechi\'s Portfolio',
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
 });
   
 app.get('/home', (req, res) => {
+  console.log("Honey! I'm home");
   res.render('home',{
     PageTitle: 'Heyyy Girlie!!!',
     metaDesc: 'Welcome to Kelechi\'s Portfolio',
@@ -37,6 +39,7 @@ app.get('/home', (req, res) => {
 });
   
 app.get('/about', (req, res) => {
+  console.log("About Page");
   res.render('intro', {
     PageTitle: 'a lil about me👋🏿',
     metaDesc: 'About Kelechi',
@@ -45,6 +48,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
+  console.log("Projects...");
   res.render('projects', {
     PageTitle: 'K\'s Portfolio ✨',
     metaDesc: 'The Repertoire',
@@ -53,6 +57,7 @@ app.get('/projects', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
+  console.log("You call me on the day of my daughter's wedding?");
   res.render('contactme', {
     PageTitle: 'We\'ve been waiting for you',
     metaDesc: 'Welcome to Kelechi\'s Portfolio',
@@ -61,6 +66,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/poems', (req, res) => {
+  console.log("Spamming end user with Poetry in 3, 2, 1...");
   res.render('poems', {
     PageTitle: 'ཐི❤︎ཋྀ',
     metaDesc: 'some musings I\'ve written...',
@@ -69,6 +75,7 @@ app.get('/poems', (req, res) => {
 });
 
 app.use((req, res) => {
+  console.log("so you found me...");
   res.status(404).render('404', {
     PageTitle: 'INTRUDER!',
     metaDesc: 'For Legal Purposes, this page doesn\'t exist',

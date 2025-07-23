@@ -21,6 +21,7 @@
   --mint-green: #cdffd8;  /* button hover colour */
   --pale-green: #bbd6be;
   --sage-green: #889d8a;
+  --disabled-green: #8c948d;
   --sky-blue: #94b9ff; /* button visited */
   --baby-blue: #a0c8d4;
   --grey-blue: #648499;
@@ -35,10 +36,10 @@
   --hunter-green: #0b553c; /*table headers, selected texts*/
   --purple: #594b70;
   --lilac: #c3aed0;
-  --lavendar: #8d77b1;
+  --lavender: #8d77b1;
+  --required-red: #740c15;
   cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
 }
-
 
 * ::-webkit-scrollbar{
   inline-size: 8px; /* Width of the scrollbar */
@@ -570,8 +571,8 @@ button:active {
 button:disabled {
     background-color: var(--disabled-pink);
     color: var(--white);
- /*border: 3px outset #fff #e6bed4;*/
-  cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    border: 4px inset var(--white) var(--button-shadow-dark);
+    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 button:focus,
@@ -599,6 +600,7 @@ input[type="submit"]:disabled,
 input[type="reset"]:disabled,
 :disabled + label {
   text-shadow: 1px 1px 0 var(--button-highlight);
+  border: 3px inset var(--light-mauve);
 }
 
 .close, .close-spotify {
@@ -683,8 +685,8 @@ input[type="reset"]:disabled,
 .window-body button:disabled {
     background-color: var(--disabled-pink);
     color: var(--white);
- /*border: 3px outset #fff #e6bed4;*/
-  cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    border: 3px inset var(--light-mauve) var(--button-shadow-dark);
+    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 .window[role=tabpanel] {
@@ -765,6 +767,14 @@ input[type="reset"]:disabled,
   box-shadow: 0 5px var(--light-mauve);
   transform: translateY(2px);
   outline: none;
+}
+
+.title-bar-spotify button:disabled {
+    background-color: var(--disabled-green);
+    color: var(--white);
+    border: 3px inset var(--sage-green) var(--grey-blue);
+    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+
 }
 
 .title-bar-ctrl button:focus {
