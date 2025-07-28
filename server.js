@@ -18,6 +18,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/projects/contact', require('./routes/apiContact')); 
 app.use('/projects/gallery', require('./routes/apiGallery'));
+const commentsRouter = require('./routes/apiComments');
+const { comments } = require('./routes/apiComments');
+app.use(commentsRouter); // ✅ Works now
+
+
 
 // Routes
 app.get('/', (req, res) => {
@@ -40,7 +45,8 @@ app.get('/home', (req, res) => {
   
 app.get('/about', (req, res) => {
   console.log("About Page");
-  res.render('intro', {
+  res.render('about', {
+    comments,
     PageTitle: 'a lil about me👋🏿',
     metaDesc: 'About Kelechi',
     layout: 'index' 

@@ -1,87 +1,70 @@
 
       <div class="container">
-      
         <div id="left-column">
-          <div class="comment-section">
-            <div class="window" style="margin: 0.5rem; width:100%; height:auto;">
-              <div class="title-bar">
-                <div class="title-bar-text" style="font-size: 18px">Leave a Comment</div>
-                <div class="title-bar-ctrl">
-                  <button class="close" id="mini">&#95;</button>
-                  <button class="close" id="XCls">&#10006;</button>
-                </div>
+          {{!-- render Visitor Notes --}}
+          <div class="window2" style="inline-size: 90%; block-size: auto; ">
+            <div class="title-bar" style="">
+              <div class="title-bar-text" style="font-size: 12px"> Visitor's Notes </div>
+              <div class="title-bar-ctrl">
+                  <button class="close" disabled>&#95;</button>
+                  <button class="close" disabled>&#10006;</button>
               </div>
-              <div class="window-body" style="justify-content: center; text-align: center; padding: 0.75rem;">         
-                <textarea id="comment" style="font-size:11px" placeholder="For your couple of pennies"> </textarea>
-                <textarea id="author" style="font-size:8px" placeholder="Author name"></textarea>
-                <button type="submit"> SEND </button> 
-              </div>
+            </div>            
+            <div class="window-body" style="padding: 1rem;" id="comment-list">
+              <p class="comment">Leave a note, find a note.</p>
             </div>
           </div>
-        </div>
 
-        
+        </div>
         <div id="right-column">
-          
+        {{>commentform}}
+        {{>contactform}}
+
         </div>
 
-        <!-- social media icons -->
-        <!-- <div class = "sm-icons">
-          <button type="submit" >
-            <img src="./SiteImages/icons/facebook-icon.png" alt="Search" class="sm-icon">
-            <a href="https://www.facebook.com/theredgirlcompany" target="_blank"></a>
-          </button>
-          <button type="submit" >
-            <img src="./SiteImages/icons/instagram-icon.png" alt="Search" class="sm-icon">
-            <a href="https://www.instagram.com/mpdbg.jpg/" target="_blank">
-            </button>
-          <button type="submit" >
-            <img src="./SiteImages/icons/linked-in.png" alt="Search" class="sm-icon">
-            <a href="https://www.linkedin.com/in/kelechi-ariwodo-735545114/" target="_blank">
-            </button>
-          <button type="submit" >
-            <img src="./SiteImages/icons/spotify.png" alt="Search" class="sm-icon">
-            <a href="https://open.spotify.com/user/12172732320?si=b77411fc88ca40ae" target="_blank"></a>
-          </button>
-          <button type="submit" >
-            <img src="./SiteImages/icons/facebook-icon.png" alt="Search" class="sm-icon">
-            <a href="https://www.facebook.com/theredgirlcompany" target="_blank"></a>
-          </button>
-        </div> -->
       </div>
     </main>
-    
-  <script>
-const form = document.getElementById("contactForm");
-const reply = document.getElementById("formStatus");
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const urlEncodedData = new URLSearchParams();
-    formData.forEach((value, key) => {
-        urlEncodedData.append(key, value);
-    });
-    fetch(form.action, {
-        method: "POST",
-        headers: {"Content-Type": "application/x-www-form-urlencoded"},
-        body: urlEncodedData
-    }).then(response =>{
-        if (response.status === 200){
-            form.reset();
-            console.log("Message sent")
-            reply.style.display = "block";
-            reply.innerHTML = "Thanks for your message! We'll talk soon. \n - xoxo K"
+<style>
+  #left-column, #right-column {
+    display: flex;
+    margin: 0.25rem;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+  }    
 
-        } else{
-          console.log("Message NOT sent")
-            reply.innerHTML= "Oops! There was a problem submitting your form. Please try again"
-        }
-    }).catch(err =>{
-        console.err('Error: ', err);
-        reply.innerHTML ="Thanks for your message! We'll talk soon. xoxo K"
-    });
-    
-});
+  #left-column {
+    background-image: url('SiteImages/layout/computer.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    flex: 1;
+    inset-inline-start: 0;
+    max-inline-size: 75%;
+    gap: 0.125rem;
+    min-inline-size: 10rem;
+    inset-inline-start:0;
+    margin: 0.5rem auto;
+    padding: 2rem;
+  }
   
-  </script>
+  #right-column {
+    background-image: url('SiteImages/layout/waitroom.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    inset-inline-end: 0;
+    flex: 2;
+    margin: 0.5rem auto;
+    padding: 10px;
+    max-inline-size: 25%;
+  }
+
+</style>
+    
+<script src="./js/contactForm.js"></script>
+<script src="./js/commentForm.js"></script>
+

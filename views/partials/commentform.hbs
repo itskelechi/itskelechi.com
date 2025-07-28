@@ -1,0 +1,46 @@
+<div class="form" style="background-image: url('Public/SiteImages/gallery/computer.jpg')">
+  <div class="window" style="margin: 1.5rem; inline-size: auto; block-size: auto;">
+    <div class="title-bar">
+      <div class="title-bar-text" style="font-size: 18px">Say Something...</div>
+      <div class="title-bar-ctrl">
+        <button class="close" id="comment-mini" disabled>&#95;</button>
+        <button class="close" id="comment-XCls" >&#10006;</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <form id="comment-form" method="POST">
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" cols="60" placeholder="Leave a note? (Something nice, preferably)" required></textarea>
+
+        <label for="name">Signed:</label>
+        <input type="text" name="name" id="name" placeholder="Your Name/Tag" required>
+
+        <span class="required" id="required"></span>
+        
+        <input type="hidden" name="honey" value="">
+        <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html">
+
+        <button type="submit" id="comment-submit">Submit</button>
+        <div id="comment-form-status" class="confirm">
+        </div>
+        <span class="alert" id="alert">Sends messages publicly (comment)</span>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+<style>
+  .required{
+    font-size: small;
+    color: var(--required-red);
+  }
+  .confirm p{
+    font-size: 12px;
+    text-align: center;
+    margin: 3px 0;
+  }
+
+</style>
+<script src="./js/commentForm.js"></script>

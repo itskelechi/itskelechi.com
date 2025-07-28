@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     const reply = document.getElementById("contact-form-status");
     const required = document.getElementById("required");
-    const button = document.getElementById("contact-submit")
+    const button = document.getElementById("contact-submit");
 
     button.addEventListener("click", async function(e) {
         
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }        
     });
 
-    document.getElementById('XCls').onclick = () => {
+    document.getElementById('contact-XCls').onclick = () => {
         document.getElementById('contact-form').reset();
     };
 

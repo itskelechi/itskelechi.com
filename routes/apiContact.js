@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS,
     },
 });
-console.log('EMAIL:', process.env.EMAIL_USER);
+// console.log('EMAIL:', process.env.EMAIL_USER);
 
 router.post('/send-message', async(req, res) => {
     var {name, email, subject, message} = req.body;

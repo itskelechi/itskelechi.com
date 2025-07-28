@@ -8,22 +8,99 @@
 <div id="right-column">
   <div class="tabs-window">
     <div class="tab-bar">
-      <button class="tab-button active" data-tab="graphic-design">Graphic Design</button>
+      <button class="tab-button active" data-tab="projects">projects</button>
       <button class="tab-button" data-tab="web-dev">Web Dev</button>
-      <button class="tab-button" data-tab="projects">projects</button>
+      <button class="tab-button" data-tab="graphic-design">Graphic Design</button>
+
     </div>
     <div class="tab-content">
-      <div class="tab-pane active" id="graphic-design" data-tab="graphic-design"> 
-        <div id="gallery-graphic-design" class="gallery-container">
-          <h4 id="title-graphic"></h4>
-          <img id="viewer-graphic" class="tab-view" />
-          <p id="desc-graphic" class="description"></p>
-          <div class="navigation">
-            <button id="prev-graphic"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
-            <button id="next-graphic"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
+      <div class="tab-pane active" id="projects" data-tab="projects">
+        {{!-- The African Collective --}}
+        <div class="card" style="background-color: #c6afb9;"> 
+          <div class="logo-box">
+            <a href="" target="_blank">
+              <img src="/SiteImages/portfolio/projects/TAC-project-logo.png" class="project-logo"/></a>
+          </div>
+          
+          <div class="project-details">
+            <h4 class="project-title"><b> The African Collective </b></h4>
+            <p><b>About: </b>Cloud-based database to support and promote African-owned businesses with a focus on accessibility and community engagement. </p>
+            <p><b><a href="#" target="_blank">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Blending Reality --}}
+        <div class="card" style="background-color: #cbb0dc ;">
+          <div class="logo-box">
+            <a href="https://tapggc.org/projects/2024/spring/blending-reality/" target="_blank">
+              <img src="/SiteImages/portfolio/projects/BR-project-logo.png" class="project-logo"/></a>
+          </div>
+          
+          <div class="project-details">
+            <h4 class="project-title"><b>Blending Reality  </b></h4>
+            <p><b>About: </b> Developed curriculum and taught AR and 3D modeling to students, promoting early engagement with IT concepts. <b><a href="https://tapggc.org/projects/2024/spring/blending-reality/" target="_blank">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Rock Paper Scissors Bot --}}
+        <div class="card" style="background-color: #e6bed4 ;">
+          <div class="logo-box">
+            <a href="https://github.com/itskelechi/rock-paper-scissors-bot" target="_blank">
+              <img src="/SiteImages/portfolio/projects/RPS-project-logo.png" class="project-logo"/></a>
+          </div>
+          
+          <div class="project-details">
+            <h4 class="project-title"><b>Rock Paper Scissors AI bot: </b></h4>
+            <p><b>About: </b> Trained models for a human-vs-AI game, simulating adaptive gameplay logic. <b><a href="https://github.com/itskelechi/rock-paper-scissors-bot" target="_blank">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- Circle Dodge --}}
+        <div class="card" style="background-color: #a0c8d4 ;">
+          <div class="logo-box">
+            <a href="https://github.com/itskelechi/circle_dodge" target="_blank">
+              <img src="/SiteImages/portfolio/projects/CD-project-logo.png" class="project-logo"/></a>
+          </div>
+          
+          <div class="project-details">
+            <h4 class="project-title"><b>Circle Dodge </b></h4>
+            <p><b>About: </b>Built a minimalist game emphasizing smooth collision detection, clean UI, and responsive controls <b><a href="https://github.com/itskelechi/circle_dodge" target="_blank">Read More...</a> </b></p>
+          </div>
+        </div>
+
+        {{!-- GGC Parking Redesign --}}
+        <div class="card" style="background-color: #bbd6be;">
+          <div class="logo-box">
+            <a href="https://itskelechi.github.io/SAD-Homework-8/tickets.html" target="_blank">
+              <img src="/SiteImages/portfolio/projects/ggc-parking-project-logo.png" class="project-logo"/></a>
+          </div>  
+
+          <div class="project-details">
+            <h4 class="project-title"><b>GGC Parking Portal </b></h4>
+            <p>
+              <b>About: </b> Redesigned the GGC Parking Portal for improved user experience checking out (shell) 
+              <b><a href="https://itskelechi.github.io/SAD-Homework-8/tickets.html" target="_blank">Read More...</a> </b>
+            </p>
+          </div>
+        </div>
+
+        {{!-- Cloud 8 --}}
+        <div class="card" style="background-color: #c6afb9;">
+          <div class="logo-box">
+            <a href="https://prezi.com/fubv29gpny8y/ato/?present=1" target="_blank">
+              <img src="/SiteImages/portfolio/projects/C8-project-logo.png" class="project-logo"/>
+            </a>
+          </div>
+          
+          <div class="project-details">
+            <h4 class="project-title"><b>Cloud 8 </b></h4>
+            <p>
+              <b>About: </b> Security Analysis– Capstone Project. Completed ATO documentation for a federal financial system; identified system risks, performed tests, and earned approval. <b><a href="https://drive.google.com/drive/folders/1DPv_zZkf-ywq2zsneZQhnwiCAvjyaB1U?usp=sharing" target="_blank">Read More...</a> </b>
+            </p>
           </div>
         </div>
       </div>
+
 
       <div class="tab-pane" id="web-dev" data-tab="web-dev">
         <div id="gallery-web-dev" class="gallery-container">
@@ -36,79 +113,21 @@
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="projects" data-tab="projects">
-        {{!-- The African Collective --}}
-        <div class="card" style="background-color: #c6afb9;"> 
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/TAC-project-logo.png" class="project-logo"/>
-          </div>
-          
-          <div class="project-details">
-            <h4><b> The African Collective </b></h4>
-            <p><b>About: </b>Cloud-based database to support and promote African-owned businesses with a focus on accessibility and community engagement. </p>
-            <p><b><a href="http://">Read More...</a> </b></p>
-          </div>
-        </div>
 
-        {{!-- Blending Reality --}}
-        <div class="card" style="background-color: #cbb0dc ;">
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/BR-project-logo.png" class="project-logo"/>
-          </div>
-          
-          <div class="project-details">
-            <h4><b>Blending Reality  </b></h4>
-            <p><b>About: </b> Developed curriculum and taught AR and 3D modeling to students, promoting early engagement with IT concepts. <b><a href="https://tapggc.org/projects/2024/spring/blending-reality/">Read More...</a> </b></p>
-          </div>
-        </div>
-
-        {{!-- Rock Paper Scissors Bot --}}
-        <div class="card" style="background-color: #e6bed4 ;">
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/RPS-project-logo.png" class="project-logo"/>
-          </div>
-          
-          <div class="project-details">
-            <h4><b>Rock Paper Scissors AI bot: </b></h4>
-            <p><b>About: </b> Trained models for a human-vs-AI game, simulating adaptive gameplay logic. <b><a href="http://">Read More...</a> </b></p>
-          </div>
-        </div>
-
-        {{!-- Circle Dodge --}}
-        <div class="card" style="background-color: #a0c8d4 ;">
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/CD-project-logo.png" class="project-logo"/>
-          </div>
-          
-          <div class="project-details">
-            <h4><b>Circle Dodge </b></h4>
-            <p><b>About: </b>Built a minimalist game emphasizing smooth collision detection, clean UI, and responsive controls <b><a href="http://">Read More...</a> </b></p>
-          </div>
-        </div>
-
-        {{!-- GGC Parking Redesign --}}
-        <div class="card" style="background-color: #bbd6be;">
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/ggc-parking-project-logo.png" class="project-logo"/>
-          </div>          
-          <div class="project-details">
-            <h4><b>GGC Parking Portal (Redesign) </b></h4>
-            <p><b>About: </b> Redesigned the GGC Parking Portal for improved user experience checking out, as well a <b><a href="http://">Read More...</a> </b></p>
-          </div>
-        </div>
-
-        {{!-- Cloud 8 --}}
-        <div class="card" style="background-color: #c6afb9;">
-          <div class="logo-box">
-            <img src="/SiteImages/portfolio/projects/C8-project-logo.png" class="project-logo"/>
-          </div>
-          <div class="project-details">
-            <h4><b>Cloud 8 </b></h4>
-            <p><b>About: </b> SecurityAnalysis– Capstone Project. Completed ATO documentation for a federal financial system; identified system risks, performed tests, and earned approval. <b><a href="http://">Read More...</a> </b></p>
+      <div class="tab-pane" id="graphic-design" data-tab="graphic-design"> 
+        <div id="gallery-graphic-design" class="gallery-container">
+          <h4 id="title-graphic"></h4>
+          <img id="viewer-graphic" class="tab-view" />
+          <p id="desc-graphic" class="description"></p>
+          <div class="navigation">
+            <button id="prev-graphic"><img src="./SiteImages/buttons/prev-btn.png"  style="max-inline-size: 5vw"></button>
+            <button id="next-graphic"><img src="./SiteImages/buttons/next-btn.png"  style="max-inline-size: 5vw"></button>
           </div>
         </div>
       </div>
+
     </div>
+    
   </div>
 </div>
 <style>
@@ -159,8 +178,8 @@
     block-size: auto
   }
   img.project-logo{
-    float: left;
-    max-width: 125px;
+    float: inline-start;
+    max-inline-size: 125px;
     border: 4px inset var(--light-mauve);
     justify-content: center;
     align-items: center;
@@ -171,43 +190,46 @@
   gap: 1rem;
   align-items: center;
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-block-end: 0.5rem;
 }
 
 .logo-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 150px; 
-  height: 150px;
+  min-inline-size: 150px; 
+  block-size: 150px;
 }
 
 .project-logo {
-  max-width: 100%;
-  max-height: 100%;
+  max-inline-size: 100%;
+  max-block-size: 100%;
   object-fit: contain;
   border: 4px inset var(--light-mauve);
 }
 
 .project-details {
-  margin-left: -20px;
-padding-left: 0;
+  margin-inline-start: -20px;
+  padding-inline-start: 0;
 }
+.project-title{
+  font-size: clamp(12px, 8vh, 18px);
 
+}
 .navigation {
   display: flex;
   justify-content: center;
   gap: 10px;
-  width: 100%;
-  max-width: 150px;
+  inline-size: 100%;
+  max-inline-size: 150px;
   margin: 0 auto;
 }
 .description{
   font-size: clamp(18px, 8vh, 12px);
-  text-align: right;
+  text-align: end;
 }
 .project-details p{
-  font-size: clamp(14px, 8vh, 8px);
+  font-size: clamp(12px, 8vh, 8px);
   word-wrap: break-word;
 
 }
@@ -230,13 +252,13 @@ padding-left: 0;
     }
      .card {
     flex-direction: column-reverse;
-    text-align: left;
+    text-align: start;
   }
   
     .logo-box {
-      width: 100%;
-      height: auto;
-      margin-bottom: 0.25rem;
+      inline-size: 100%;
+      block-size: auto;
+      margin-block-end: 0.25rem;
     }
   }
 </style>
