@@ -2,42 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: auto; 
+  scrollbar-width: 4px; 
   scrollbar-color: #c38da2 #eeded2;
   font-family: "Silkscreen", sans-serif;
 
 }
 
 :root {
-  font-size: 24px;
+  font-size: clamp(14px, 8vw, 24px);
   inline-size: 100%;
-  --background-pink: #e6bed4;  /* background */
-  --mauve-pink: #a55280; /* text colour, window frame*/
-  --light-mauve: #c38da2; /* header background, button text, dialog*/
-  --light-mauve-transparent: #c38da246;
-  --wine-pink: #824255;
-  --disabled-pink: #c6afb9;
-  --cream: #eeded2; /* button fill (standard) */
-  --mint-green: #cdffd8;  /* button hover colour */
-  --pale-green: #bbd6be;
-  --sage-green: #889d8a;
-  --disabled-green: #8c948d;
-  --sky-blue: #94b9ff; /* button visited */
-  --baby-blue: #a0c8d4;
-  --grey-blue: #648499;
+  --background-pink: #41343b;  /* background */
+  --mauve-pink: #1b0e15; /* text colour, window frame*/
+  --light-mauve: #624952; /* header background, button text, dialog*/
+  --light-mauve-transparent: #0e090b46;
+  --wine-pink: #3c0717;
+  --disabled-pink: #665e62;
+  --cream: #97817d; /* button fill (standard) */
+  --mint-green: #485a42;  /* button hover colour */
+  --pale-green: #09340e;
+  --sage-green: #0b120c;
+  --disabled-green: #3b3b3b;
+  --sky-blue: #2b3445; /* button visited */
+  --baby-blue: #404f53;
+  --grey-blue: #3d4347;
   --black: #000000; /* special text dark mode */
   --white: #ffffff; /* special text light mode, button highlight */
-  --baby-pink: #e0c5d0; /*button border*/
-  --beige: #eeded2; /*Surface */
-  --button-shadow-light: #eddde3; /*outset button shadow */
-  --button-shadow-dark: #bd84a3; /*inset button shadow */
-  --light-pink: #e8b7ca; /*dialog pink dark */
-  --pale-pink: #eddde3; /*dialog pink light */
-  --hunter-green: #0b553c; /*table headers, selected texts*/
-  --purple: #594b70;
-  --lilac: #c3aed0;
-  --lavender: #8d77b1;
-  --required-red: #740c15;
+  --baby-pink: #7a173e; /*button border*/
+  --beige: #3e2009; /*Surface */
+  --button-shadow-light: #750830; /*outset button shadow */
+  --button-shadow-dark: #883447; /*inset button shadow */
+  --light-pink: #7e0e12; /*dialog pink dark */
+  --pale-pink: #ac0404; /*dialog pink light */
+  --hunter-green: #010b08; /*table headers, selected texts*/
+  --purple: #2c2538;
+  --lilac: #3b204b;
+  --lavender: #653fa3;
+  --required-red: #f40e25;
   cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
 }
 

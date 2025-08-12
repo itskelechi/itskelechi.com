@@ -80,6 +80,16 @@ app.get('/poems', (req, res) => {
   });
 });
 
+app.get('/blog',(req, res) => {
+  console.log("How could you, this is like my diary");
+  res.render('blog', {
+    PageTitle: 'Dear diary...',
+    metaDesc: 'How could you, this is like my diary',
+    layout: 'index' 
+  });
+});
+
+
 app.use((req, res) => {
   console.log("so you found me...");
   res.status(404).render('404', {
@@ -88,6 +98,8 @@ app.use((req, res) => {
     layout: 'buffer' 
   });
 });
+
+
 
 // // Handle 500 errors
 // app.use((err, req, res, next) => {
