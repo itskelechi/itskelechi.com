@@ -12,25 +12,28 @@
 
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <span class="required" id="name-required"></span>
 
-        <label for="email">Email Address:</label>
+        <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="you@example.com" required>
-        
+        <span class="required" id="email-required"></span>
+
         <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject" placeholder="Subject of Your Message" required>
-        
+        <input type="text" name="subject" id="subject" placeholder="What's this about?" required>
+        <span class="required" id="subject-required"></span>
+
         <label for="message">Message:</label>
         <textarea name="message" id="message" rows="5" cols="60" placeholder="What would you like to say?" required></textarea>
+        <span class="required" id="message-required"></span>
 
         <span class="required" id="required"></span>
         
-        <input type="hidden" name="honey" value="">
-        <input type="hidden" name="_error" value="https://itskelechi.neocities.org/error.html">
+        <input type="text" name="honey" style="display: none;">
 
         <button type="submit" id="contact-submit">Send Message</button>
         <div id="contact-form-status" class="confirm">
         </div>
-        <span class="alert" id="alert">Sends messages privately (email)</span>
+        <span class="alert" id="alert">Sends Email to my inbox</span>
 
       </form>
 
