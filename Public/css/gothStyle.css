@@ -11,29 +11,29 @@
 :root {
   font-size: clamp(14px, 8vw, 24px);
   inline-size: 100%;
-  --background-pink: #41343b;  /* background */
-  --mauve-pink: #1b0e15; /* text colour, window frame*/
-  --light-mauve: #624952; /* header background, button text, dialog*/
-  --light-mauve-transparent: #0e090b46;
+  --background-pink: #000000;  /* background */
+  --mauve-pink: #c04136; /* text colour, window frame*/
+  --light-mauve: #760000; /* header background, button text, dialog*/
+  --light-mauve-transparent: #76000046;
   --wine-pink: #3c0717;
-  --disabled-pink: #665e62;
-  --cream: #97817d; /* button fill (standard) */
-  --mint-green: #485a42;  /* button hover colour */
-  --pale-green: #09340e;
+  --disabled-pink: #5d0a0a;
+  --cream: #490202; /* button fill (standard) */
+  --mint-green: #415b44;  /* button hover colour */
+  --pale-green: #537256;
   --sage-green: #0b120c;
-  --disabled-green: #3b3b3b;
-  --sky-blue: #2b3445; /* button visited */
-  --baby-blue: #404f53;
-  --grey-blue: #3d4347;
-  --black: #000000; /* special text dark mode */
-  --white: #ffffff; /* special text light mode, button highlight */
-  --baby-pink: #7a173e; /*button border*/
-  --beige: #3e2009; /*Surface */
-  --button-shadow-light: #750830; /*outset button shadow */
-  --button-shadow-dark: #883447; /*inset button shadow */
+  --disabled-green: #537256;
+  --sky-blue: #684984; /* button visited */
+  --baby-blue: #a78cae;
+  --grey-blue: #3d2c4d;
+  --black: #ffffff; /* special text dark mode */
+  --white: #000000; /* special text light mode, button highlight */
+  --baby-pink: #320101; /*button border*/
+  --beige: #490202; /*Surface */
+  --button-shadow-light: #5d0a0a; /*outset button shadow */
+  --button-shadow-dark: #5d0a0a; /*inset button shadow */
   --light-pink: #7e0e12; /*dialog pink dark */
   --pale-pink: #ac0404; /*dialog pink light */
-  --hunter-green: #010b08; /*table headers, selected texts*/
+  --hunter-green: #052408; /*table headers, selected texts*/
   --purple: #2c2538;
   --lilac: #3b204b;
   --lavender: #653fa3;
@@ -73,8 +73,7 @@
 
 body {
     background-color: var(--background-pink);
-    background-image: url('./SiteImages/layout/site-background.png');
-    
+    background-image: url('./SiteImages/layout/goth-site-background.png');
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 12px;
@@ -228,7 +227,7 @@ header {
   inline-size: 100%;
   padding: 10px 20px;
   background-color: var(--cream);
-  border: 4px outset var(--white);
+  border: 4px outset var(--button-shadow-light);
   cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
@@ -239,6 +238,7 @@ header {
 
 .header-nav .button a button:hover {
   background-color: var(--mint-green);
+  border: 4px outset var(--white);
   color: var(--sage-green);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -272,11 +272,12 @@ main {
 /*------------------------------------------------------------------*/
 /*Images*/
 img.cloud{
-      float: center;
+      /* float: center; */
       inline-size: 100%;
       block-size: 150px;
       position: fixed;
       z-index: -1;
+      top: 0;
     }
 
 img.start{
@@ -292,11 +293,10 @@ img.start{
 footer {
   display: inline-flex;
   inset-block-end: 0;
-  /* justify-content: left; */
-  /* align-content: center; */
+
   inline-size: 100%;
   font-size: 12px;
-  border: 3px outset var(--white); 
+  border: 3px outset var(--button-shadow-light); 
   background-color: var(--cream);
   color: var(--light-mauve);
   padding-block-start: 2px;
@@ -305,14 +305,10 @@ footer {
 
 .footer-nav {
   display: inline;
-  /*flex-grow: 1;*/
-  /* justify-content: center;
-  align-items: center; */
   flex-wrap: wrap;
   inline-size: 100%;
   max-inline-size: 100%;
   margin: 0 auto;
-  /* padding-block-end: 20px; */
 }
 
 .footer-nav .dropUpbtn {
@@ -382,7 +378,7 @@ button,legend,select,option,table
   background: var(--cream);
   border-block-start: 2px solid var(--white);
   border-inline-start: 2px solid var(--white);
-  border-inline-end: 2px solid var(--dialog-gray);
+  border-inline-end: 2px solid var(--light-mauve);
   font-size: 18px;
   border-block-end: none;
   font-weight: bold;
@@ -735,8 +731,8 @@ input[type="reset"]:disabled,
 .title-bar.inactive {
   background: linear-gradient(
     90deg,
-    var(--dialog-gray),
-    var(--dialog-gray-light)
+    var(--light-mauve),
+    var(--pale-pink)
   );
 }
 

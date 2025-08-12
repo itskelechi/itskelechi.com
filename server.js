@@ -85,7 +85,7 @@ app.get('/blog',(req, res) => {
   res.render('blog', {
     PageTitle: 'Dear diary...',
     metaDesc: 'How could you, this is like my diary',
-    layout: 'index' 
+    layout: 'blogs' 
   });
 });
 

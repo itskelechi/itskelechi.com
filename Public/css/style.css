@@ -25,8 +25,8 @@
   --sky-blue: #94b9ff; /* button visited */
   --baby-blue: #a0c8d4;
   --grey-blue: #648499;
-  --black: #000000; /* special text dark mode */
-  --white: #ffffff; /* special text light mode, button highlight */
+  --black: #000000; /* special text light mode */
+  --white: #ffffff; /* special text dark mode, button highlight */
   --baby-pink: #e0c5d0; /*button border*/
   --beige: #eeded2; /*Surface */
   --button-shadow-light: #eddde3; /*outset button shadow */
@@ -272,11 +272,12 @@ main {
 /*------------------------------------------------------------------*/
 /*Images*/
 img.cloud{
-      float: center;
+      /* float: center; */
       inline-size: 100%;
       block-size: 150px;
       position: fixed;
       z-index: -1;
+      top: 0;
     }
 
 img.start{
