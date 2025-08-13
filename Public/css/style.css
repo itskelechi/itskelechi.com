@@ -38,7 +38,7 @@
   --lilac: #c3aed0;
   --lavender: #8d77b1;
   --required-red: #740c15;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
+  cursor: url(/SiteImages/icons/mouse-pointer.png), auto;  
 }
 
 * ::-webkit-scrollbar{
@@ -229,7 +229,7 @@ header {
   padding: 10px 20px;
   background-color: var(--cream);
   border: 4px outset var(--white);
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(/SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   font-family: "Silkscreen", sans-serif;
@@ -320,7 +320,7 @@ footer {
   color: var(--light-mauve);
   background-color: var(--cream);
   border: 4px inset var(--light-mauve);
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(/SiteImages/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
@@ -350,7 +350,7 @@ button,legend,select,option,table
     background-color: var(--cream);
     color: var(--mauve-pink);
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+    cursor: url(/SiteImages/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
     inline-size: 100%;
 }
@@ -476,7 +476,7 @@ label{
   /* background-color: var(--cream); */
   margin-inline-end: -4px;
   padding: 0;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;
+  cursor: url(/SiteImages/icons/mouse-pointer.png), pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,7 +592,7 @@ button:disabled {
     background-color: var(--disabled-pink);
     color: var(--white);
     border: 4px inset var(--white) var(--button-shadow-dark);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(/SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 button:focus,
@@ -647,7 +647,7 @@ input[type="reset"]:disabled,
   background-color: var(--disabled-pink);
   color: var(--mauve-pink);
   transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(/SiteImages/icons/mouse-pointer.png), pointer;  
   inline-size: 100%;
   min-block-size: 150px;
   block-size: fit-content;
@@ -706,7 +706,7 @@ input[type="reset"]:disabled,
     background-color: var(--disabled-pink);
     color: var(--white);
     border: 3px inset var(--light-mauve) var(--button-shadow-dark);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(/SiteImages/icons/mouse-pointer.png), not-allowed;  
 }
 
 .window[role=tabpanel] {
@@ -793,7 +793,7 @@ input[type="reset"]:disabled,
     background-color: var(--disabled-green);
     color: var(--white);
     border: 3px inset var(--sage-green) var(--grey-blue);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(/SiteImages/icons/mouse-pointer.png), not-allowed;  
 
 }
 
