@@ -73,7 +73,7 @@
 
 body {
     background-color: var(--background-pink);
-    background-image: url('./SiteImages/layout/site-background.png');
+    background-image: url('/SiteImages/layout/site-background.png');
     
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
@@ -179,13 +179,13 @@ hr{
   z-index: 0;
 }
 #frontpage{
-  background-image: url('./SiteImages/layout/site-landing.png');
+  background-image: url('/SiteImages/layout/site-landing.png');
 }
 #waitroom{
-  background-image: url('./SiteImages/layout/lounge.jpg');
+  background-image: url('/SiteImages/layout/lounge.jpg');
 }
 #err404{
-  background-image: url('./SiteImages/layout/e404.jpg');
+  background-image: url('/SiteImages/layout/e404.jpg');
 }
 
 /*------------------------------------------------------------------*/
