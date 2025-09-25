@@ -73,7 +73,7 @@
 
 body {
     background-color: var(--background-pink);
-    background-image: url('./SiteImages/layout/goth-site-background.png');
+    background-image: url('/SiteImages/layout/goth-site-background.png');
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 12px;
