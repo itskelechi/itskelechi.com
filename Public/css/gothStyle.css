@@ -38,7 +38,7 @@
   --lilac: #3b204b;
   --lavender: #653fa3;
   --required-red: #f40e25;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), auto;  
+  cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), auto;  
 }
 
 * ::-webkit-scrollbar{
@@ -73,7 +73,7 @@
 
 body {
     background-color: var(--background-pink);
-    background-image: url('/SiteImages/layout/goth-site-background.png');
+    background-image: url('/SiteImages/DarkMode/layout/site-background.png');
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 12px;
@@ -178,13 +178,13 @@ hr{
   z-index: 0;
 }
 #frontpage{
-  background-image: url('./SiteImages/layout/site-landing.png');
+  background-image: url('/SiteImages/DarkMode/layout/site-landing.png');
 }
 #waitroom{
-  background-image: url('./SiteImages/layout/lounge.jpg');
+  background-image: url('/SiteImages/DarkMode/layout/lounge.jpg');
 }
 #err404{
-  background-image: url('./SiteImages/layout/e404.jpg');
+  background-image: url('/SiteImages/DarkMode/layout/e404.jpg');
 }
 
 /*------------------------------------------------------------------*/
@@ -228,7 +228,7 @@ header {
   padding: 10px 20px;
   background-color: var(--cream);
   border: 4px outset var(--button-shadow-light);
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   font-family: "Silkscreen", sans-serif;
@@ -315,7 +315,7 @@ footer {
   color: var(--light-mauve);
   background-color: var(--cream);
   border: 4px inset var(--light-mauve);
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
   transition: var(--background-pink) 0.3s, color 0.3s;
   text-align: center;
   box-shadow: 3px 3px var(--wine-pink), 0 0 0 3px var(--light-mauve);
@@ -345,7 +345,7 @@ button,legend,select,option,table
     background-color: var(--cream);
     color: var(--mauve-pink);
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+    cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
     box-shadow: 3px 3px var(--light-mauve), 0 0 0 3px var(--cream);
     inline-size: 100%;
 }
@@ -460,7 +460,7 @@ form{
   /* background-color: var(--cream); */
   margin-inline-end: -4px;
   padding: 0;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;
+  cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -576,7 +576,7 @@ button:disabled {
     background-color: var(--disabled-pink);
     color: var(--white);
     border: 4px inset var(--white) var(--button-shadow-dark);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), not-allowed;  
 }
 
 button:focus,
@@ -631,7 +631,7 @@ input[type="reset"]:disabled,
   background-color: var(--disabled-pink);
   color: var(--mauve-pink);
   transition: background-color 0.3s ease, color 0.3s ease;
-  cursor: url(./SiteImages/icons/mouse-pointer.png), pointer;  
+  cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
   inline-size: 100%;
   min-block-size: 150px;
   block-size: fit-content;
@@ -690,7 +690,7 @@ input[type="reset"]:disabled,
     background-color: var(--disabled-pink);
     color: var(--white);
     border: 3px inset var(--light-mauve) var(--button-shadow-dark);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), not-allowed;  
 }
 
 .window[role=tabpanel] {
@@ -777,7 +777,7 @@ input[type="reset"]:disabled,
     background-color: var(--disabled-green);
     color: var(--white);
     border: 3px inset var(--sage-green) var(--grey-blue);
-    cursor: url(./SiteImages/icons/mouse-pointer.png), not-allowed;  
+    cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), not-allowed;  
 
 }
 

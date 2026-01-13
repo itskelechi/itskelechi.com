@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
         const desc = title.match(/\((.*?)\)/)? title.match(/\((.*?)\)/)[1].replace(/-/g, ' '): folderDescriptions[folder];
 
         return{
-          file: `/SiteImages/portfolio/${folder}/${f}`,
+          file: `./SiteImages/portfolio/${folder}/${f}`,
           title: title.match(/\((.*?)\)/)? trimTitle : title,
           description: `✨ ${desc} ✨`
         };        
