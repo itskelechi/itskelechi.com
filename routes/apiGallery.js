@@ -6,6 +6,7 @@ const router = express.Router(); // <-- this is the key fix
 
 router.get('/', (req, res) => {
   const folder = req.query.folder;
+  const mode = req.query.mode === 'dark' ? 'DarkMode' : 'LightMode';
 
   if (!folder) {
     return res.status(400).json({ error: 'No folder specified' });
@@ -31,7 +32,7 @@ router.get('/', (req, res) => {
         const desc = title.match(/\((.*?)\)/)? title.match(/\((.*?)\)/)[1].replace(/-/g, ' '): folderDescriptions[folder];
 
         return{
-          file: `./SiteImages/portfolio/${folder}/${f}`,
+          file: `./SiteImages/portfolio/${mode}/${folder}/${f}`,
           title: title.match(/\((.*?)\)/)? trimTitle : title,
           description: `✨ ${desc} ✨`
         };        

@@ -9,12 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        .dark{
+            
+        }
+    </style>
 </head>
 
 <body>
 
     {{> header}}
     <img src = "SiteImages/LightMode/layout/cloud.png" class="cloud">
+    <div id="viewModeButtons" class="viewModebtn">
+        <button onclick="SwapviewMode()" id="viewDarkMode" title="" class="sm-btn dark"> Dark Mode </button>
+        <button onclick="SwapviewMode()" id="viewLightMode" title="" class="sm-btn light">Light Mode </button>
+        <button onclick="SwapviewMode()" id="viewArteMode" title="" class="sm-btn arte">Arte Mode </button>
+    </div>
 
     {{{body}}}
 
