@@ -581,7 +581,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-button:active {
+button:active{
   box-shadow: 0 5px var(--light-mauve);
   transform: translateY(2px);
   outline: none;

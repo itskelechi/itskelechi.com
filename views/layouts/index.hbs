@@ -9,10 +9,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./css/gothStyle.css" rel="stylesheet" type="text/css" media="all">
+
 
     <style>
-        .dark{
-            
+        .viewModebtn{
+            position: relative;
+            left: 31.5%;
+            align-items: right;
+            padding-bottom: 1rem;
+            z-index: 100;
+        }
+        .sm-btn-light{
+            border: 3px outset #eeded2; 
+            background-color: #e6bed4;
+            color: #a55280;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            box-shadow: 3px 3px #bd84a3, 0 0 0 3px #eddde3;
+        }
+       .sm-btn-dark{
+            border: 3px outset #000000; 
+            background-color: #490202;
+            color: #c04136;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            box-shadow: 3px 3px #c04136, 0 0 0 3px #490202;
+        }
+        
+        .sm-btn-dark:hover{
+            background-color: #415b44;
+            color: #0b120c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .sm-btn-arte{
+            border: 3px outset #1d1409; 
+            background-color: #4d351a;
+            color: #b5beb6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            box-shadow: 3px 3px #b5beb6, 0 0 0 3px #291c0e;
         }
     </style>
 </head>
@@ -20,11 +57,11 @@
 <body>
 
     {{> header}}
-    <img src = "SiteImages/LightMode/layout/cloud.png" class="cloud">
+    <img src = "SiteImages/DarkMode/layout/cloud.png" class="cloud">
     <div id="viewModeButtons" class="viewModebtn">
-        <button onclick="SwapviewMode()" id="viewDarkMode" title="" class="sm-btn dark"> Dark Mode </button>
-        <button onclick="SwapviewMode()" id="viewLightMode" title="" class="sm-btn light">Light Mode </button>
-        <button onclick="SwapviewMode()" id="viewArteMode" title="" class="sm-btn arte">Arte Mode </button>
+        <button onclick="SwapviewMode()" id="viewLightMode" title="" class="sm-btn sm-btn-light">Light Mode </button>
+        <button onclick="SwapviewMode()" id="viewDarkMode" title="" class="sm-btn sm-btn-dark"> Dark Mode </button>
+        <button onclick="SwapviewMode()" id="viewArteMode" title="" class="sm-btn sm-btn-arte">Arte Mode </button>
     </div>
 
     {{{body}}}
