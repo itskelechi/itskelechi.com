@@ -57,11 +57,11 @@
 <body>
 
     {{> header}}
-    <img src = "SiteImages/DarkMode/layout/cloud.png" class="cloud">
+    <img src = "SiteImages/DarkMode/layout/cloud.png" data-theme-image class="cloud">
     <div id="viewModeButtons" class="viewModebtn">
-        <button onclick="SwapviewMode()" id="viewLightMode" title="" class="sm-btn sm-btn-light">Light Mode </button>
-        <button onclick="SwapviewMode()" id="viewDarkMode" title="" class="sm-btn sm-btn-dark"> Dark Mode </button>
-        <button onclick="SwapviewMode()" id="viewArteMode" title="" class="sm-btn sm-btn-arte">Arte Mode </button>
+        <button onclick="toggleMode('light')" id="viewLightMode" title="" class="sm-btn sm-btn-light">Light Mode </button>
+        <button onclick="toggleMode('dark')" id="viewDarkMode" title="" class="sm-btn sm-btn-dark"> Dark Mode </button>
+        <button onclick="toggleMode('arte')" id="viewArteMode" title="" class="sm-btn sm-btn-arte">Arte Mode </button>
     </div>
 
     {{{body}}}

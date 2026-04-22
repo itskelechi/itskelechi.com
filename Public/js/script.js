@@ -23,3 +23,27 @@ function formatTime(d) {
     console.log(`Date: ${after12}:${mins} ${AMPM}`)
     return `${after12}:${mins} ${AMPM}`
 }
+
+
+function toggleMode(mode) {
+    const light = document.getElementById('viewLightMode');
+    const dark = document.getElementById('viewDarkMode');
+    const arte = document.getElementById('viewArteMode');
+
+    if (mode === 'light') {
+        light.classList.add('active')
+        document.documentElement.dataset.theme = 'light';
+    } else if (mode === 'dark') {
+        dark.classList.add('active')
+        document.documentElement.dataset.theme = 'dark';
+    } else if (mode === 'arte') {
+        arte.classList.add('active')
+        document.documentElement.dataset.theme = 'arte';
+    }
+    localStorage.setItem('theme', mode);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    toggleMode(savedTheme);
+});

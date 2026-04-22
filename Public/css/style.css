@@ -74,7 +74,6 @@
 body {
     background-color: var(--background-pink);
     background-image: url('/SiteImages/LightMode/layout/site-background.png');
-    
     font-family: "Arial", monospace;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 12px;
@@ -820,6 +819,19 @@ input[type="reset"]:disabled,
   background-color: var(--mint-green);
   color: var(--mauve-pink);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* physical click */
+.sm-btn:active {
+  box-shadow: 0 1px var(--light-mauve);
+  transform: translateY(2px);
+}
+
+/* persistent selected state */
+.sm-btn.active {
+  box-shadow: inset 2px 2px 0 var(--sky-blue), inset -2px -2px 0 var(--cream);
+  background: var(--baby-blue);
+  font-weight: bold;
 }
 
 .sm-icon {
