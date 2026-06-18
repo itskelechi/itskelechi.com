@@ -66,7 +66,7 @@ app.get('/contact', (req, res) => {
   console.log("You call me on the day of my daughter's wedding?");
   res.render('contactme', {
     PageTitle: 'We\'ve been waiting for you',
-    metaDesc: 'Welcome to Kelechi\'s Portfolio',
+    metaDesc: 'Call me, Beep me if you wanna reach me',
     layout: 'index' 
   });
 });
@@ -75,16 +75,16 @@ app.get('/poems', (req, res) => {
   console.log("Spamming end user with Poetry in 3, 2, 1...");
   res.render('poems', {
     PageTitle: 'ཐི❤︎ཋྀ',
-    metaDesc: 'some musings I\'ve written...',
+    metaDesc: 'some musings...',
     layout: 'index' 
   });
 });
 
 app.get('/blog',(req, res) => {
-  console.log("How could you, this is like my diary");
+  console.log("How could you?! This is my diary");
   res.render('blog', {
     PageTitle: 'Dear diary...',
-    metaDesc: 'How could you, this is like my diary',
+    metaDesc: 'How could you?! This is my diary',
     layout: 'blogs' 
   });
 });

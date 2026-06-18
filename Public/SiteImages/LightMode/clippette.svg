@@ -3,37 +3,82 @@
         <filter id="drop-shadow" x="-20%" y="-20%" width="100%" height="100%">
             <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.15"/>
         </filter>
+        <linearGradient id="goldL" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="10%" stop-color="#5a3d10" />
+            <stop offset="30%" stop-color="#775418" />
+            <stop offset="100%" stop-color="#fdfaf6" />
+            <stop offset="60%" stop-color="#e6cc99" />
+        </linearGradient>
+        <radialGradient id="goldR" cx="0%" cy="50%" spreadMethod="reflect">
+            <stop offset="1%" stop-color="#e6cc99" />
+            <stop offset="50%" stop-color="#5a3d10" />
+            <stop offset="100%" stop-color="#775418" />
+
+        </radialGradient>
     </defs>
 
     <g>
         <!-- back loop -->
-        <path d="M 100 700
-                 L 100, 400
-                 A 100, 100, 0 0 1, 700 400
-                 M 700 1400
-                 L 700 400
-                 A 10, 150, 0 0 1 200, 200
-                 L 200 400
-                 A 10, 200 0 1 1 450 800
+        <path d="M 100 1000
+                 l 0 -550
+                 a 100 100 0 0 1 600 0
+                 l 0 750
+                 a 100 100 0 0 1 -480 0
+                 l 0 -700
+                 a 100 100 0 0 1 350 0
+                 l 0 550
                 "
-                fill="none" stroke="#c79b47" stroke-width="20" stroke-linecap="round" />
+                fill="none" stroke="url(#goldR)" stroke-width="75" stroke-linecap="round" />
 
-        <!-- eyes -->
-        <!-- left -->
-        <circle cx="75" cy="125" r="9" fill="#231f20" /> <!-- pupil -->
-        <circle cx="72" cy="122" r="3" fill="#fff" /> <!-- ball -->
-        <!-- lash top -->
-        <!-- lash bottom -->
+        <!--L Eye -->
+        <ellipse rx="105" ry="75" cx="240" cy="295" r="45" fill="#fff7f7"
+             transform="rotate(13, 290, 495)" stroke="#000" stroke-width="5" /> <!-- eyeball -->
+        <ellipse rx="50" ry="75" cx="290" cy="290" r="45" fill="#231f20" stroke="#0e0c0d"/> <!-- pupil -->
+        <circle cx="325" cy="248" r="17" fill="#fff" /><!-- catch-light -->
         <!-- sparkle -->
+         <path d="M 312 312
+                  l 3.4 7.2
+                  l 7.2 3.8
+                  l -7.2 3.4
+                  l -3.4 7.2
+                  l -3.4 -7.2
+                  l -7.2 -3.4
+                  l 7.2 -3.4
+                  l 3.4 -7.6
+                  z" fill="#fff"/>        <!-- lash top -->
+        <!-- lash bottom -->
+ 
 
-        <!-- right -->
-        <circle cx="205" cy="125" r="9" fill="#231f20" />
-        <circle cx="202" cy="122" r="3" fill="#fff" />
+        <!-- R Eye -->
+        <ellipse rx="105" ry="75" cx="630" cy="295" r="45" fill="#fff7f7"
+            transform="rotate(-13, 630, 496)" stroke="#000" stroke-width="5"/> <!-- eyeball -->
+        <ellipse rx="50" ry="75" cx="590" cy="295" r="45" fill="#231f20" stroke="#0e0c0d"/> <!-- pupil -->
+        <circle cx="625" cy="248" r="17" fill="#fff" /> <!-- catch-light -->
+        <path d="M 612 312
+                  l 3.4 7.2
+                  l 7.2 3.8
+                  l -7.2 3.4
+                  l -3.4 7.2
+                  l -3.4 -7.2
+                  l -7.2 -3.4
+                  l 7.2 -3.4
+                  l 3.4 -7.6
+                  z" fill="#FFF"/>
 
         <!-- brows -->
-        <path d="M 66 113 Q 75 107 88 113" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" />
-        <path d="M 216 113 Q 205 107 194 113" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" />
+        <path d="M 08 190 Q 150 120 412 195" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" />
+        <path d="M 490 195Q 750 120 912 215" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round" />
 
+        <!-- eye lids -->
+        <path d="M 108 250 q 142 -70 304 5" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round"  transform="rotate(13, 108, 250)"  />
+        <path d="M 490 195 q 260 -75 322 20" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" />
+
+         <path d="M 168 310 q 42 130 254 5" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" />
+        <path d="M 490 195 q 260 125 322 20" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" />
+
+        <!-- blush -->
+         <ellipse rx="155" ry="65" cx="695" cy="635" r="45" fill="rgba(238,144,160,0.452)"/>
+         <ellipse rx="155" ry="65" cx="255" cy="635" r="45" fill="rgba(238,144,160,0.452)"/>
         <!-- Page -->
         <!-- <path d="M 584 138 Q 90 148 96 138" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round" /> -->
         <!-- bottom lip -->
