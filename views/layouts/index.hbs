@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&ampdisplay=swap" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="./css/gothStyle.css" rel="stylesheet" type="text/css" media="all">
+    {{!-- <link href="./css/gothStyle.css" rel="stylesheet" type="text/css" media="all"> --}}
 
 
     <style>
@@ -25,7 +25,7 @@
             background-color: #e6bed4;
             color: #a55280;
             transition: background-color 0.3s ease, color 0.3s ease;
-            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            cursor: url(./SiteImages/LightMode/icons/mouse-pointer.png), pointer;  
             box-shadow: 3px 3px #bd84a3, 0 0 0 3px #eddde3;
         }
        .sm-btn-dark{
@@ -33,7 +33,7 @@
             background-color: #490202;
             color: #c04136;
             transition: background-color 0.3s ease, color 0.3s ease;
-            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            cursor: url(./SiteImages/LightMode/icons/mouse-pointer.png), pointer;  
             box-shadow: 3px 3px #c04136, 0 0 0 3px #490202;
         }
         
@@ -48,7 +48,7 @@
             background-color: #4d351a;
             color: #b5beb6;
             transition: background-color 0.3s ease, color 0.3s ease;
-            cursor: url(./SiteImages/DarkMode/icons/mouse-pointer.png), pointer;  
+            cursor: url(./SiteImages/LightMode/icons/mouse-pointer.png), pointer;  
             box-shadow: 3px 3px #b5beb6, 0 0 0 3px #291c0e;
         }
     </style>
@@ -57,11 +57,11 @@
 <body>
 
     {{> header}}
-    <img src = "SiteImages/DarkMode/layout/cloud.png" class="cloud">
+    <img src = "SiteImages/LightMode/layout/cloud.png" data-theme-image class="cloud">
     <div id="viewModeButtons" class="viewModebtn">
-        <button onclick="SwapviewMode()" id="viewLightMode" title="" class="sm-btn sm-btn-light">Light Mode </button>
-        <button onclick="SwapviewMode()" id="viewDarkMode" title="" class="sm-btn sm-btn-dark"> Dark Mode </button>
-        <button onclick="SwapviewMode()" id="viewArteMode" title="" class="sm-btn sm-btn-arte">Arte Mode </button>
+        <button onclick="toggleMode('light')" id="viewLightMode" title="" class="sm-btn sm-btn-light">Light Mode </button>
+        <button onclick="toggleMode('dark')" id="viewLightMode" title="" class="sm-btn sm-btn-dark"> Dark Mode </button>
+        <button onclick="toggleMode('arte')" id="viewArteMode" title="" class="sm-btn sm-btn-arte">Arte Mode </button>
     </div>
 
     {{{body}}}

@@ -1,0 +1,116 @@
+<svg viewBox="0 0 1000 2000" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="drop-shadow" x="-20%" y="-20%" width="100%" height="100%">
+            <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.15"/>
+        </filter>
+        <linearGradient id="goldL" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="10%" stop-color="#5a3d10" />
+            <stop offset="30%" stop-color="#775418" />
+            <stop offset="100%" stop-color="#fdfaf6" />
+            <stop offset="60%" stop-color="#e6cc99" />
+        </linearGradient>
+        <radialGradient id="goldR" cx="0%" cy="50%" spreadMethod="reflect">
+            <stop offset="1%" stop-color="#e6cc99" />
+            <stop offset="50%" stop-color="#5a3d10" />
+            <stop offset="100%" stop-color="#775418" />
+
+        </radialGradient>
+    </defs>
+
+    <g>
+        <!-- back loop -->
+        <path d="M 100 1000
+                 l 0 -550
+                 a 100 100 0 0 1 600 0
+                 l 0 750
+                 a 100 100 0 0 1 -480 0
+                 l 0 -550
+                 a 100 100 0 0 1 350 0
+                 l 0 400
+                "
+                fill="none" stroke="url(#goldR)" stroke-width="75" stroke-linecap="round" />
+
+              <!-- L brows -->
+            <path d="M 15 190 Q 120 120 312 195" fill="none" stroke="#222" stroke-width="7\10" stroke-linecap="round" transform="translate(50, 10)"/>
+            <!-- R brow -->
+            <path d="M 490 195Q 750 120 812 215" fill="none" stroke="#222" stroke-width="7\10" stroke-linecap="round"  transform="translate(-20, 10)"/>
+        
+         <!--Left -->
+        <g transform="translate(0 50)">        
+
+            <ellipse rx="115" ry="65" cx="160" cy="335" r="45" fill="#fff7f7"
+             transform="rotate(13, 290, 495)" stroke="#000" stroke-width="5" /> <!-- eyeball -->
+            <ellipse rx="50" ry="65" cx="215" cy="310" r="45" fill="#231f20" stroke="#0e0c0d"/> <!-- pupil -->
+            <circle cx="255" cy="288" r="17" fill="#fff" /><!-- catch-light -->
+            <!-- sparkle -->
+            <path d="M 225 320
+                    l 3.4 7.2
+                    l 7.2 3.8
+                    l -7.2 3.4
+                    l -3.4 7.2
+                    l -3.4 -7.2
+                    l -7.2 -3.4
+                    l 7.2 -3.4
+                    l 3.4 -7.6
+                    z" fill="#fff"/>        <!-- lash top -->
+          
+            
+            <!-- lashes -->
+            <g transform="rotate(15, 108, 250) translate(-10, 20)">
+                <path stroke-width="5" stroke-opacity="50%" fill="none" stroke="#0e0c0d" d="M0 220 q 55 35 100 10 q 142 -70 304 15" /> <!-- s -->
+                <path stroke-width="5" stroke-opacity="50%" fill="none" stroke="red" d="M30 200 q 55 35 100 10 q 122 -50 244 35" /> <!-- s -->
+                <path stroke-width="5" stroke-opacity="50%" fill="none" stroke="red" d="M60 180 q 55 35 100 10 q 102 -30 244 35" /> <!-- s -->
+
+
+                
+            </g>
+
+            <path d="M 78 250 q 142 -70 304 5" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round"  transform="rotate(13, 108, 250) translate(-10, 20)"  /> <!-- top -->
+                
+            <!-- bottom lids  -->
+            <path d="M 88 300 q 42 120 264 55" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" />
+            
+            <!-- blush -->
+            <ellipse rx="145" ry="65" cx="190" cy="465" r="45" fill="rgba(238,144,160,0.452)" transform="rotate(-13, 455496)"/>
+
+        </g>
+            
+        <!-- Right -->
+        <g transform="translate(0 50)">
+            <path stroke-width="4" fill="none" stroke="red" d="M470 370 q 142 -70 304 5 q 142 0 0 0" /> <!-- s -->
+
+            <ellipse rx="115" ry="65" cx="650" cy="300" r="45" fill="#fff7f7"
+                transform="rotate(-13, 630, 496)" stroke="#000" stroke-width="5"/> <!-- eyeball -->
+            <ellipse rx="50" ry="65" cx="590" cy="300" r="45" fill="#231f20" stroke="#0e0c0d"/> <!-- pupil -->
+            <circle cx="625" cy="255" r="17" fill="#fff" /> <!-- catch-light -->
+            <path d="M 612 312
+                    l 3.4 7.2
+                    l 7.2 3.8
+                    l -7.2 3.4
+                    l -3.4 7.2
+                    l -3.4 -7.2
+                    l -7.2 -3.4
+                    l 7.2 -3.4
+                    l 3.4 -7.6
+                    z" fill="#FFF"
+            />
+
+            
+
+            <!-- lash -->
+            <path d="M 590 190 q 172 -70 304 5" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" transform="rotate(-17, 172, 70) translate(-230, 210)"  />  <!-- top-->
+            <path d="M 430 305 q 210 140 264 55" fill="none" stroke="#222" stroke-width="10" stroke-linecap="round" transform="rotate(-25 555 280)" /> <!-- bottom -->
+
+            <!-- blush -->
+            <ellipse rx="145" ry="65" cx="685" cy="435" r="45" fill="rgba(238,144,160,0.452)" transform="rotate(-13, 630, 496)"/>
+
+
+        </g>
+       
+        
+
+        <!-- Page -->
+        <!-- <path d="M 584 138 Q 90 148 96 138" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round" /> -->
+        <!-- bottom lip -->
+    </g>
+</svg>
